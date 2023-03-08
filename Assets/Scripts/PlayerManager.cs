@@ -35,5 +35,7 @@ public class PlayerManager : MonoBehaviour
             .GetComponent<PlayerController>()
             .setIsPlayer1(false)
             .setPosition(new Vector3(5, 0, 0));
+
+        Player2.GetComponent<SpriteRenderer>().flipX = true;
     }
 }

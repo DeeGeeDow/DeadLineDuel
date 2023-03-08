@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5629801683221100583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4698778424898348446, guid: 92c173e994b055942a222e57aa08218e, type: 3}
   onPlayerBulletChanged: {fileID: 11400000, guid: 640cf103b4f901a4d9f20ca102e50076, type: 2}
+  animator: {fileID: 8757447479269876430}
   shootCooldown: 1
   reloadTime: 1
   bulletCount: 5
@@ -253,7 +254,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8328338411606681817, guid: 9e733c025c6cf4c4d9acbf018c6ee886, type: 3}
+  m_Sprite: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

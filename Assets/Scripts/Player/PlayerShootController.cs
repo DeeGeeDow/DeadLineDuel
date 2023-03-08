@@ -7,6 +7,7 @@ public class PlayerShootController : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameEvent onPlayerBulletChanged;
+    public Animator animator;
     [SerializeField] private float shootCooldown = 1;
     [SerializeField] private float reloadTime = 1;
     [SerializeField] private int bulletCount = 5;
@@ -15,6 +16,7 @@ public class PlayerShootController : MonoBehaviour
     private bool shootButtonTriggered;
     private bool reloadButtonTriggered;
     private bool isReloading = false;
+    private bool isShooting = false;
     private bool shootAvailable = true;
 
     // Start is called before the first frame update
@@ -28,6 +30,8 @@ public class PlayerShootController : MonoBehaviour
     {
         if (reloadButtonTriggered) reload();
         shoot();
+        animator.SetBool("isAttack", isShooting);
+        isShooting = false;
     }
 
     public void onShoot(InputAction.CallbackContext context)
@@ -47,12 +51,13 @@ public class PlayerShootController : MonoBehaviour
             // notify SoundController nyetel sfx peluru abis
             return;
         }
+        isShooting = true;
         var newPos = transform.position + new Vector3(1.1f, 0, 0) * ((this.isPlayer1) ? 1 : -1);
         var bullet = Instantiate(bulletPrefab);
         bullet.GetComponent<BulletController>()
             .setIsPlayer1(this.isPlayer1)
             .setPosition(newPos);
-                
+
         shootAvailable = false;
         bulletCount--;
         onPlayerBulletChanged.Raise(this, bulletCount);
