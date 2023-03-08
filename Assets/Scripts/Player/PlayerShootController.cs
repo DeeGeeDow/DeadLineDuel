@@ -8,6 +8,9 @@ public class PlayerShootController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameEvent onPlayerBulletChanged;
     public Animator animator;
+
+    public AudioSource audioSource;
+    public AudioClip shootSFX;
     [SerializeField] private float shootCooldown = 1;
     [SerializeField] private float reloadTime = 1;
     [SerializeField] private int bulletCount = 5;
@@ -37,6 +40,7 @@ public class PlayerShootController : MonoBehaviour
     public void onShoot(InputAction.CallbackContext context)
     {
         shootButtonTriggered = context.action.triggered;
+        audioSource.PlayOneShot(shootSFX, 1);
     }
 
     public void onReload(InputAction.CallbackContext context)

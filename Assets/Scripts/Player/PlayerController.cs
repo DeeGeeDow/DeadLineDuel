@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public bool isPlayer1;
     private Camera mainCamera;
+    private List<float> boundary = new List<float>(4);
 
     private void Start()
     {
@@ -27,5 +28,25 @@ public class PlayerController : MonoBehaviour
     {
         this.isPlayer1 = isPlayer1;
         return this;
+    }
+
+    public PlayerController setBoundaries(float up, float down, float right, float left)
+    {
+        boundary[0] = up;
+        boundary[1] = down;
+        boundary[2] = right;
+        boundary[3] = left;
+        return this;
+    }
+
+    public PlayerController setBoundaries(List<float> bound)
+    {
+        boundary = bound;
+        return this;
+    }
+
+    public List<float> getBoundaries()
+    {
+        return this.boundary;
     }
 }

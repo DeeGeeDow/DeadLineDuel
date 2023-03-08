@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6f6650a4380fe4caf68ffd22f61bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 20
+  movementSpeed: 10
 --- !u!114 &5766528584750242291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,8 +80,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4698778424898348446, guid: 92c173e994b055942a222e57aa08218e, type: 3}
   onPlayerBulletChanged: {fileID: 11400000, guid: 640cf103b4f901a4d9f20ca102e50076, type: 2}
   animator: {fileID: 8757447479269876430}
+  audioSource: {fileID: 891735838149809290, guid: e5911db81a2eb3548a2facbfe3c4a8c9, type: 3}
+  shootSFX: {fileID: 8300000, guid: 5eb2a04bee2d5f6439152cd052fd011e, type: 3}
   shootCooldown: 1
-  reloadTime: 1
+  reloadTime: 0.6
   bulletCount: 5
   maxBullet: 5
 --- !u!114 &4849231054656718722
@@ -279,3 +281,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: 3
   onPlayerHealthChanged: {fileID: 11400000, guid: 43b8eaf7cd7eb8748b8ba028b2d13c1a, type: 2}
+  audioSource: {fileID: 891735838149809290, guid: e5911db81a2eb3548a2facbfe3c4a8c9, type: 3}
+  hitSFX: {fileID: 8300000, guid: f1a6faa3ba54730468a2a7470b63c1c7, type: 3}
