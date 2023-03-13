@@ -8,9 +8,6 @@ public class PlayerShootController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameEvent onPlayerBulletChanged;
     public Animator animator;
-
-    public AudioSource audioSource;
-    public AudioClip shootSFX;
     [SerializeField] private float shootCooldown = 1;
     [SerializeField] private float reloadTime = 1;
     [SerializeField] private int bulletCount = 5;
@@ -33,14 +30,12 @@ public class PlayerShootController : MonoBehaviour
     {
         if (reloadButtonTriggered) reload();
         shoot();
-        animator.SetBool("isAttack", isShooting);
         isShooting = false;
     }
 
     public void onShoot(InputAction.CallbackContext context)
     {
         shootButtonTriggered = context.action.triggered;
-        audioSource.PlayOneShot(shootSFX, 1);
     }
 
     public void onReload(InputAction.CallbackContext context)
@@ -56,6 +51,7 @@ public class PlayerShootController : MonoBehaviour
             return;
         }
         isShooting = true;
+        animator.SetTrigger("Attack");
         var newPos = transform.position + new Vector3(1.1f, 0, 0) * ((this.isPlayer1) ? 1 : -1);
         var bullet = Instantiate(bulletPrefab);
         bullet.GetComponent<BulletController>()

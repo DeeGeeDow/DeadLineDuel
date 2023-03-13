@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
+    [SerializeField] private float speed = 30.0f;
     private bool isPlayer1;
     private Camera mainCamera;
     // Start is called before the first frame update

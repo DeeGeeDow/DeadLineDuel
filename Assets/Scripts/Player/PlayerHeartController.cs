@@ -6,8 +6,7 @@ public class PlayerHeartController : MonoBehaviour
 {
     [SerializeField] private int heart = 3;
     public GameEvent onPlayerHealthChanged;
-    public AudioSource audioSource;
-    public AudioClip hitSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +25,6 @@ public class PlayerHeartController : MonoBehaviour
         {
             if (collider.gameObject.GetComponent<BulletController>().getIsPlayer1() != gameObject.GetComponent<PlayerController>().isPlayer1)
             {
-                audioSource.PlayOneShot(hitSFX, 1);
                 heart--;
                 onPlayerHealthChanged.Raise(this, heart);
             }
