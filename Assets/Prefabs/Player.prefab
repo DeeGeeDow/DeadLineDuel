@@ -81,6 +81,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4698778424898348446, guid: 92c173e994b055942a222e57aa08218e, type: 3}
   onPlayerBulletChanged: {fileID: 11400000, guid: 640cf103b4f901a4d9f20ca102e50076, type: 2}
   animator: {fileID: 8757447479269876430}
+  shootSFX: {fileID: 8300000, guid: 5eb2a04bee2d5f6439152cd052fd011e, type: 3}
   shootCooldown: 1
   reloadTime: 0.6
   bulletCount: 5
@@ -256,7 +257,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.97547174, b: 0.97547174, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -280,6 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: 3
   onPlayerHealthChanged: {fileID: 11400000, guid: 43b8eaf7cd7eb8748b8ba028b2d13c1a, type: 2}
+  HitSFX: {fileID: 8300000, guid: f1a6faa3ba54730468a2a7470b63c1c7, type: 3}
+  tinungTinungDuration: 0.7
 --- !u!82 &3721009551695530239
 AudioSource:
   m_ObjectHideFlags: 0

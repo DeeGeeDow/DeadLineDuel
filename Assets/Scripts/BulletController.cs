@@ -51,5 +51,9 @@ public class BulletController : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+        if (collider.gameObject.tag == "Obstacle")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
