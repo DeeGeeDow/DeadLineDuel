@@ -112,7 +112,7 @@
                 {
                     "name": "up",
                     "id": "cd768862-e02f-4cd8-bd38-1e7de74da8f3",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",
@@ -123,7 +123,7 @@
                 {
                     "name": "down",
                     "id": "2005a537-98f9-46d3-903e-49d17fb34ecf",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",
@@ -134,7 +134,7 @@
                 {
                     "name": "left",
                     "id": "22d4ebe6-9785-4173-aabb-132fb9d927b5",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",
@@ -145,7 +145,7 @@
                 {
                     "name": "right",
                     "id": "350db2de-80db-404d-af1d-37251c4420bf",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",
@@ -178,7 +178,7 @@
                 {
                     "name": "",
                     "id": "e63834ce-7651-4151-98eb-06c9230142a9",
-                    "path": "<Keyboard>/rightCtrl",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",
@@ -200,7 +200,7 @@
                 {
                     "name": "",
                     "id": "51d23c19-1afd-4bd4-87c6-84b3c27b56b7",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard1",
@@ -211,7 +211,7 @@
                 {
                     "name": "",
                     "id": "38fbfcde-bddf-48c9-b2ad-d4de93a04dec",
-                    "path": "<Keyboard>/rightAlt",
+                    "path": "<Keyboard>/o",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",
@@ -244,7 +244,7 @@
                 {
                     "name": "",
                     "id": "004cef20-979d-484c-bf48-c3390993a026",
-                    "path": "<Keyboard>/slash",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard2",

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
-    public int hp = 3;
+    public int hp = 1;
 #nullable enable
     public Item? itemInside = null;
     public GameEvent PlayerGetItem;
