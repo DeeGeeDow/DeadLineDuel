@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScientistSkill : Skill
+public class ScientistSkill : MonoBehaviour, Skill
 {
-    public override void onCast()
+    public void onCast()
     {
         Debug.Log("Scientist Skill casted");
     }

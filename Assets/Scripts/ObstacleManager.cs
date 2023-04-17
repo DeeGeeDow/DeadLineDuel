@@ -9,6 +9,14 @@ public class ObstacleManager : MonoBehaviour
     public List<GameObject> obstacles = new List<GameObject>();
     public int numOfObstacleStart = 7;
 
+    private void Awake()
+    {
+        for(int i=0; i<this.transform.childCount; i++)
+        {
+            GameObject child = this.transform.GetChild(i).gameObject;
+            obstacles.Add(child);
+        }
+    }
     private void Start()
     {
         startSpawnObstacle();

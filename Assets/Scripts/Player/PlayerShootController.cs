@@ -19,6 +19,7 @@ public class PlayerShootController : MonoBehaviour
     private bool reloadButtonTriggered;
     private bool isReloading = false;
     private bool shootAvailable = true;
+    private float delayAttack = 0.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class PlayerShootController : MonoBehaviour
     void Update()
     {
         if (reloadButtonTriggered) reload();
-        shoot();
+        Shoot();
     }
 
     public void onShoot(InputAction.CallbackContext context)
@@ -44,25 +45,30 @@ public class PlayerShootController : MonoBehaviour
         reloadButtonTriggered = context.action.triggered;
     }
 
-    public void shoot()
+    private void Shoot()
     {
-        if(!shootButtonTriggered || !shootAvailable || bulletCount<=0 || isReloading)
+        if (!shootButtonTriggered || !shootAvailable || bulletCount <= 0 || isReloading)
         {
             // notify SoundController nyetel sfx peluru abis
             return;
         }
         animator.SetTrigger("Attack");
         audioSource.PlayOneShot(shootSFX);
+        shootAvailable = false;
+        bulletCount--;
+        onPlayerBulletChanged.Raise(this, bulletCount);
+        StartCoroutine(StartCooldown(delayAttack, ShootAfterAnim));
+        StartCoroutine(StartCooldown(shootCooldown, () => { shootAvailable = true; }));
+    }
+
+    public void ShootAfterAnim()
+    {
         var newPos = transform.position + new Vector3(1.1f, 0, 0) * ((this.isPlayer1) ? 1 : -1);
         var bullet = Instantiate(bulletPrefab);
         bullet.GetComponent<BulletController>()
             .setIsPlayer1(this.isPlayer1)
             .setPosition(newPos);
 
-        shootAvailable = false;
-        bulletCount--;
-        onPlayerBulletChanged.Raise(this, bulletCount);
-        StartCoroutine(StartCooldown(shootCooldown, () => { shootAvailable = true; }));
     }
     public void reload()
     {

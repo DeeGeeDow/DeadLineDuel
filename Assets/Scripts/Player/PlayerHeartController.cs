@@ -9,6 +9,8 @@ public class PlayerHeartController : MonoBehaviour
     public AudioClip HitSFX;
     public float tinungTinungDuration = 1f;
     private AudioSource audioSource;
+    public Animator animator;
+    private bool immune = false;
 
     private void Start()
     {
@@ -26,29 +28,49 @@ public class PlayerHeartController : MonoBehaviour
         }
         if (heart <= 0)
         {
-            Destroy(this.gameObject);
+            Die();
+            //Destroy(this.gameObject);
         }
     }
 
+    private void Die()
+    {
+        gameObject.GetComponent<PlayerShootController>().enabled = false;
+        gameObject.GetComponent<PlayerMovementController>().enabled = false;
+        //gameObject.GetComponent<PlayerSkillController>().enabled = false;
+        animator.SetTrigger("Die");
+    }
     private void hit()
     {
         heart--;
         audioSource.PlayOneShot(HitSFX);
         onPlayerHealthChanged.Raise(this, heart);
+        StartCoroutine(Immune());
         StartCoroutine(TinungTinung());
     }
 
     private IEnumerator TinungTinung()
     {
-        GetComponent<Collider>().enabled = false;
+        //GetComponent<Collider>().enabled = false;
         float timer = 0f;
         Debug.Log("Tinung Tinung");
-        while(timer < tinungTinungDuration)
+        while(immune || timer<0.01f)
         {
             GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
             timer += Time.deltaTime;
             yield return new WaitForSeconds(0.1f);
+            //Debug.Log(timer);
         }
+        //GetComponent<SpriteRenderer>().enabled = true;
+        //GetComponent<Collider>().enabled = true;
+    }
+
+    private IEnumerator Immune()
+    {
+        this.immune = true;
+        GetComponent<Collider>().enabled = false;
+        yield return new WaitForSeconds(this.tinungTinungDuration);
+        this.immune = false;
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider>().enabled = true;
     }

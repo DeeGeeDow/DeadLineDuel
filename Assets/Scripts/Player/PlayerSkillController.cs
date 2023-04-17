@@ -6,10 +6,18 @@ using UnityEngine.InputSystem;
 public class PlayerSkillController : MonoBehaviour
 {
     private bool skillButtonTriggered;
-    private Skill skill;
+    [SerializeField]
+    [RequireInterface(typeof(Skill))]
+    private Object _skill;
+    private Skill skill => _skill as Skill;
+    private float skillCooldown = 30f;
+    private float skillProgress = 0f;
+    private bool isSkillReady = false;
+    public GameEvent SkillCasted;
     private void Update()
     {
-        if(skillButtonTriggered) castSkill();
+        SkillProgress();
+        if(skillButtonTriggered && isSkillReady) castSkill();
     }
 
     public void onSkillCast(InputAction.CallbackContext context)
@@ -20,5 +28,21 @@ public class PlayerSkillController : MonoBehaviour
     private void castSkill()
     {
         skill.onCast();
+        this.isSkillReady = false;
+        SkillCasted.Raise(this, GetComponent<PlayerController>().isPlayer1);
+    }
+
+    private void SkillProgress()
+    {
+        if(skillProgress < skillCooldown)
+        {
+            skillProgress += Time.deltaTime;
+            //SkillProgressUpdated.Raise(this, skillProgress);
+            Debug.Log(skillProgress);
+        }
+        else
+        {
+            isSkillReady = true;
+        }
     }
 }

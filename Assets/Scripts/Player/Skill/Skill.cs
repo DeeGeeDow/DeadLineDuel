@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract public class Skill : MonoBehaviour
+public interface Skill
 {
-    public abstract void onCast();
+    public void onCast();
 }
