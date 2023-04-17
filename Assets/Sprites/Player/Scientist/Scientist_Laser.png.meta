@@ -1,0 +1,1068 @@
+fileFormatVersion: 2
+guid: 3f9e6e994d2f2ba499ceda8e8e30259d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4264156514894132534
+    second: Scientist_Laser_0
+  - first:
+      213: -8912888791706375568
+    second: Scientist_Laser_1
+  - first:
+      213: -4743014142950645496
+    second: Scientist_Laser_2
+  - first:
+      213: 6402379996160557446
+    second: Scientist_Laser_3
+  - first:
+      213: -2619563264248127583
+    second: Scientist_Laser_4
+  - first:
+      213: -7566922729332877816
+    second: Scientist_Laser_5
+  - first:
+      213: 8953121800177174570
+    second: Scientist_Laser_6
+  - first:
+      213: 3464976627224179145
+    second: Scientist_Laser_7
+  - first:
+      213: 1470085615493012704
+    second: Scientist_Laser_8
+  - first:
+      213: 1413700717135096440
+    second: Scientist_Laser_9
+  - first:
+      213: -6669689918737661014
+    second: Scientist_Laser_10
+  - first:
+      213: 3360488766294690230
+    second: Scientist_Laser_11
+  - first:
+      213: 3092477841306119233
+    second: Scientist_Laser_12
+  - first:
+      213: 6480233763314189447
+    second: Scientist_Laser_13
+  - first:
+      213: 3276561949571227555
+    second: Scientist_Laser_14
+  - first:
+      213: -16236189013655054
+    second: Scientist_Laser_15
+  - first:
+      213: -6746833766175185699
+    second: Scientist_Laser_16
+  - first:
+      213: -8735681024311956421
+    second: Scientist_Laser_17
+  - first:
+      213: -5172760687529210926
+    second: Scientist_Laser_18
+  - first:
+      213: 6410603044221909139
+    second: Scientist_Laser_19
+  - first:
+      213: -269710726087132757
+    second: Scientist_Laser_20
+  - first:
+      213: 3602570913880920409
+    second: Scientist_Laser_21
+  - first:
+      213: -6331021767858394056
+    second: Scientist_Laser_22
+  - first:
+      213: -7501447979238973852
+    second: Scientist_Laser_23
+  - first:
+      213: 1368459178959509814
+    second: Scientist_Laser_24
+  - first:
+      213: 1797664321669609391
+    second: Scientist_Laser_25
+  - first:
+      213: 7067610151199693281
+    second: Scientist_Laser_26
+  - first:
+      213: 915047685866777230
+    second: Scientist_Laser_27
+  - first:
+      213: 8018826600900678335
+    second: Scientist_Laser_28
+  - first:
+      213: 4001350985008569392
+    second: Scientist_Laser_29
+  - first:
+      213: 6983502918750236117
+    second: Scientist_Laser_30
+  - first:
+      213: 7466924184095512613
+    second: Scientist_Laser_31
+  - first:
+      213: 4021662047828249525
+    second: Scientist_Laser_32
+  - first:
+      213: 7302950896637191542
+    second: Scientist_Laser_33
+  - first:
+      213: 8620510678074710493
+    second: Scientist_Laser_34
+  - first:
+      213: 1448241563583201120
+    second: Scientist_Laser_35
+  - first:
+      213: 3795019835548364673
+    second: Scientist_Laser_36
+  - first:
+      213: -452137737837391311
+    second: Scientist_Laser_37
+  - first:
+      213: -1112771291326688309
+    second: Scientist_Laser_38
+  - first:
+      213: -8523851308950080305
+    second: Scientist_Laser_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scientist_Laser_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635bee002c35d2b30800000000000000
+      internalID: 4264156514894132534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_1
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ae7cfcdde0f4480800000000000000
+      internalID: -8912888791706375568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_2
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801e5cc34cd6d2eb0800000000000000
+      internalID: -4743014142950645496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_3
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681873c6fa2d9d850800000000000000
+      internalID: 6402379996160557446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_4
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 7000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afd3d7171175abd0800000000000000
+      internalID: -2619563264248127583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806d8437ed3ecf690800000000000000
+      internalID: -7566922729332877816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28cd5277d0ef3c70800000000000000
+      internalID: 8953121800177174570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_7
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c17abc52e1161030800000000000000
+      internalID: 3464976627224179145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_8
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec5fd4141bc66410800000000000000
+      internalID: 1470085615493012704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_9
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 6000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a6d87ef497e9310800000000000000
+      internalID: 1413700717135096440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa343af3b508073a0800000000000000
+      internalID: -6669689918737661014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b98fa27abad2ae20800000000000000
+      internalID: 3360488766294690230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_12
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c61d64630baea20800000000000000
+      internalID: 3092477841306119233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_13
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784c5d3264a6ee950800000000000000
+      internalID: 6480233763314189447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_14
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 5000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af11c0bbbfa87d20800000000000000
+      internalID: 3276561949571227555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1c559a54156cff0800000000000000
+      internalID: -16236189013655054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_16
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd464889f6e6e52a0800000000000000
+      internalID: -6746833766175185699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_17
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ce3ca5460a4c680800000000000000
+      internalID: -8735681024311956421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_18
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db47b7af89a638b0800000000000000
+      internalID: -5172760687529210926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_19
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 4000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39872eef08907f850800000000000000
+      internalID: 6410603044221909139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9b67b068bc14cf0800000000000000
+      internalID: -269710726087132757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_21
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951d600b827eef130800000000000000
+      internalID: 3602570913880920409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_22
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ce88dce31b328a0800000000000000
+      internalID: -6331021767858394056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_23
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e9368aec085e790800000000000000
+      internalID: -7501447979238973852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_24
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 3000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63911837f5ebdf210800000000000000
+      internalID: 1368459178959509814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7b2861d2692f810800000000000000
+      internalID: 1797664321669609391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_26
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9d3399cf1351260800000000000000
+      internalID: 7067610151199693281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_27
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ae1aca507e2bc00800000000000000
+      internalID: 915047685866777230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_28
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb25326de48984f60800000000000000
+      internalID: 8018826600900678335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_29
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 2000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c58135587a78730800000000000000
+      internalID: 4001350985008569392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dde20887e26ae060800000000000000
+      internalID: 6983502918750236117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_31
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52859c5ebf7df9760800000000000000
+      internalID: 7466924184095512613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_32
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb09772350dfc730800000000000000
+      internalID: 4021662047828249525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_33
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6752e26d52b495560800000000000000
+      internalID: 7302950896637191542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_34
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 1000
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9da1dc9c432a770800000000000000
+      internalID: 8620510678074710493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f355a6700391410800000000000000
+      internalID: 1448241563583201120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_36
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18feb6dfe6e9aa430800000000000000
+      internalID: 3795019835548364673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_37
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13257aa7f1fa9b9f0800000000000000
+      internalID: -452137737837391311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_38
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc358300864ae80f0800000000000000
+      internalID: -1112771291326688309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist_Laser_39
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 0
+        width: 3000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc438c3556235b980800000000000000
+      internalID: -8523851308950080305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 62f93f7a806c2244da66404288acc34d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
