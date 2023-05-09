@@ -5,25 +5,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public GameObject player1Prefab, player2Prefab;
     private PlayerInput Player1, Player2;
     void Awake()
     {
         var gamepadCount = Gamepad.all.Count;
         if (gamepadCount >= 2)
         {
-            Player1 = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[0]);
-            Player2 = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[1]);
+            Player1 = PlayerInput.Instantiate(player1Prefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[0]);
+            Player2 = PlayerInput.Instantiate(player2Prefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[1]);
         }
         else if (gamepadCount == 1)
         {
-            Player1 = PlayerInput.Instantiate(playerPrefab, controlScheme: "Keyboard1", pairWithDevice: Keyboard.current);
-            Player2 = PlayerInput.Instantiate(playerPrefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[0]);
+            Player1 = PlayerInput.Instantiate(player1Prefab, controlScheme: "Keyboard1", pairWithDevice: Keyboard.current);
+            Player2 = PlayerInput.Instantiate(player2Prefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[0]);
         }
         else
         {
-            Player1 = PlayerInput.Instantiate(playerPrefab, controlScheme: "Keyboard1", pairWithDevice: Keyboard.current);
-            Player2 = PlayerInput.Instantiate(playerPrefab, controlScheme: "Keyboard2", pairWithDevice: Keyboard.current);
+            Player1 = PlayerInput.Instantiate(player1Prefab, controlScheme: "Keyboard1", pairWithDevice: Keyboard.current);
+            Player2 = PlayerInput.Instantiate(player2Prefab, controlScheme: "Keyboard2", pairWithDevice: Keyboard.current);
         }
 
         List<float> p1_bound = new List<float>(Boundaries.HACKER_BOUND);
