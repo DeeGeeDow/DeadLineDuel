@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillUIController : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class SkillUIController : MonoBehaviour
 
     public void onSkillCasted(Component sender, object data)
     {
-        isPlayer1 = (bool) data;
+        if(isPlayer1 == (bool)data)
+        {
+            this.skillTime = 0;
+        }
     }
 
     public void UpdateBar()
@@ -40,6 +44,6 @@ public class SkillUIController : MonoBehaviour
 
     public void DrawBar()
     {
-
+        transform.GetChild(0).GetComponent<Image>().fillAmount = Mathf.Min(skillTime / timeToRecharge, 1);
     }
 }

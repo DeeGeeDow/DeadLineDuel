@@ -27,4 +27,14 @@ public class PlayerMovementController : MonoBehaviour
     {
         movementInput = context.ReadValue<Vector2>();
     }
+
+    public void setHalfSpeed()
+    {
+        movementSpeed /= 2;
+    }
+
+    public void setDoubleSpeed()
+    {
+        movementSpeed *= 2;
+    }
 }

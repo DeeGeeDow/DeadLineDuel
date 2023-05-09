@@ -26,9 +26,15 @@ public class RequireInterfaceDrawer : PropertyDrawer
             EditorGUI.BeginProperty(position, label, property);
 
             // Draw property field.
-            UnityEngine.Object obj = EditorGUI.ObjectField(position, label, property.objectReferenceValue, typeof(UnityEngine.Object), true);
+            var reference = EditorGUI.ObjectField(position, label, property.objectReferenceValue, requiredAttribute.requiredType, true);
 
-            if (obj is GameObject g) property.objectReferenceValue = g.GetComponent(requiredAttribute.requiredType);
+            if (reference is null)
+            {
+                var obj = EditorGUI.ObjectField(position, label, property.objectReferenceValue, typeof(UnityEngine.Object), true);
+                if (obj is GameObject g) reference = g.GetComponent(requiredAttribute.requiredType);
+            }
+
+            property.objectReferenceValue = reference;
 
             // Finish drawing property field.
             EditorGUI.EndProperty();
