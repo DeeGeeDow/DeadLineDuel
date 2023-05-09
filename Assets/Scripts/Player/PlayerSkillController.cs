@@ -36,9 +36,9 @@ public class PlayerSkillController : MonoBehaviour
         GetComponent<PlayerMovementController>().setHalfSpeed();
     }
 
-    private void SkillFinished(Component sender, object data)
+    public void SkillFinished(Component sender, object data)
     {
-        if (sender.GetComponent<PlayerController>().isPlayer1 == GetComponent<PlayerController>().isPlayer1)
+        if ((bool) data == GetComponent<PlayerController>().isPlayer1)
         {
             animator.SetTrigger("UltFinished");
             GetComponent<PlayerMovementController>().setDoubleSpeed();
@@ -50,11 +50,16 @@ public class PlayerSkillController : MonoBehaviour
         {
             skillProgress += Time.deltaTime;
             //SkillProgressUpdated.Raise(this, skillProgress);
-            Debug.Log(skillProgress);
         }
         else
         {
             isSkillReady = true;
         }
+    }
+
+    [ContextMenu("Cast Skill")]
+    public void CastSkillTest()
+    {
+        castSkill();
     }
 }

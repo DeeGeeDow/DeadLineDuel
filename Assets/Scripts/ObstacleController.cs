@@ -23,7 +23,8 @@ public class ObstacleController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Bullet")
+        Debug.Log(other.tag);
+        if(other.gameObject.tag == "Bullet" || other.gameObject.tag == "Laser")
         {
             decreaseHP();
         }

@@ -25,6 +25,9 @@ public class PlayerHeartController : MonoBehaviour
             {
                 hit();
             }
+        }else if(collider.gameObject.tag == "Laser")
+        {
+            if(collider.transform.parent.parent.GetComponentInChildren<PlayerController>().isPlayer1 != GetComponent<PlayerController>().isPlayer1) hit();
         }
         if (heart <= 0)
         {

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public PlayerController setPosition(Vector3 newPos)
     {
-        this.transform.position += newPos;
+        transform.parent.position += newPos;
         return this;
     }
 
