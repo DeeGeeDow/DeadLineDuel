@@ -39,7 +39,7 @@ public class ScientistSkill : MonoBehaviour, Skill
     }
     public void afterSkill()
     {
-        skillFinished.Raise(this, GetComponent<PlayerController>().isPlayer1);
+        skillFinished.Raise(this, true);
         Destroy(skill);
         Debug.Log("after skill");
     }

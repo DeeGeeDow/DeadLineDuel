@@ -1,12 +1,57 @@
 fileFormatVersion: 2
 guid: c757e159cbc80a245acfd916f1774ec2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 342900966683265971
+    second: Hacker_Shoot_0
+  - first:
+      213: -8236081639974887742
+    second: Hacker_Shoot_1
+  - first:
+      213: -7032005156015434160
+    second: Hacker_Shoot_2
+  - first:
+      213: 6594991309592066085
+    second: Hacker_Shoot_3
+  - first:
+      213: -2954292899172088413
+    second: Hacker_Shoot_4
+  - first:
+      213: 6869013294747624193
+    second: Hacker_Shoot_5
+  - first:
+      213: 7342250008212277661
+    second: Hacker_Shoot_6
+  - first:
+      213: -3519589278031992667
+    second: Hacker_Shoot_7
+  - first:
+      213: 8000677906401408994
+    second: Hacker_Shoot_8
+  - first:
+      213: -156476967079668389
+    second: Hacker_Shoot_9
+  - first:
+      213: -5490363352613327826
+    second: Hacker_Shoot_10
+  - first:
+      213: -1290334253201037438
+    second: Hacker_Shoot_11
+  - first:
+      213: 87655202975296741
+    second: Hacker_Shoot_12
+  - first:
+      213: -7037627994938804761
+    second: Hacker_Shoot_13
+  - first:
+      213: -2134422772786946941
+    second: Hacker_Shoot_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -35,13 +80,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,9 +95,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -75,13 +120,340 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hacker_Shoot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5000
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb4b48cc9a32c400800000000000000
+      internalID: 342900966683265971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_1
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 5000
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce1e24926f83bd80800000000000000
+      internalID: -8236081639974887742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_2
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 5000
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0561cf8519c496e90800000000000000
+      internalID: -7032005156015434160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_3
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 5000
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528f50187ad168b50800000000000000
+      internalID: 6594991309592066085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_4
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 5000
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5836eb24e3007d0800000000000000
+      internalID: -2954292899172088413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2500
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1032edea233a35f50800000000000000
+      internalID: 6869013294747624193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_6
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2500
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d990a974b79e4e560800000000000000
+      internalID: 7342250008212277661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_7
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2500
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a821aff238e72fc0800000000000000
+      internalID: -3519589278031992667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_8
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 2500
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e73f5d9a2e180f60800000000000000
+      internalID: 8000677906401408994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_9
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 2500
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b559fa9070514ddf0800000000000000
+      internalID: -156476967079668389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ce8a7be9f4ec3b0800000000000000
+      internalID: -5490363352613327826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_11
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287ee6c45dfc71ee0800000000000000
+      internalID: -1290334253201037438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_12
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecae0451f9673100800000000000000
+      internalID: 87655202975296741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_13
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 0
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5f35420a2555e90800000000000000
+      internalID: -7037627994938804761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hacker_Shoot_14
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 2500
+        height: 2500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c978bfbc10162e0800000000000000
+      internalID: -2134422772786946941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8f30b374da1f3f145aab3f4fbd0dc59b
     internalID: 0
     vertices: []
     indices: 

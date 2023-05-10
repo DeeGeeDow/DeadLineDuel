@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerDebuffController : MonoBehaviour
+{
+    private void EnableAttack(bool isEnabled)
+    {
+        GetComponent<PlayerShootController>().enabled = isEnabled;
+    }
+
+    private void EnableMovement(bool isEnabled)
+    {
+        GetComponent<PlayerMovementController>().enabled = isEnabled;
+    }
+
+    public void HackerSkillCasted(Component sender, object data)
+    {
+        if (sender.GetComponent<PlayerController>().isPlayer1 != GetComponent<PlayerController>().isPlayer1 && sender is HackerSkill)
+        {
+            EnableAttack(false);
+        }
+    }
+
+    public void HackerSkillFinished(Component sender, object data)
+    {
+        // data consists "is the entire skill is finished?"
+        if (sender.GetComponent<PlayerController>().isPlayer1 != GetComponent<PlayerController>().isPlayer1 && sender is HackerSkill)
+        {
+            if((bool)data)
+            {
+                EnableAttack(true);
+            }
+        }
+    }
+}

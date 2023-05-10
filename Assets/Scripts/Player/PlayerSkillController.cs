@@ -38,10 +38,14 @@ public class PlayerSkillController : MonoBehaviour
 
     public void SkillFinished(Component sender, object data)
     {
-        if ((bool) data == GetComponent<PlayerController>().isPlayer1)
+        // data consists "is the entire skill is finished?"
+        if (sender.GetComponent<PlayerController>().isPlayer1 == GetComponent<PlayerController>().isPlayer1)
         {
+            if ((bool)data)
+            {
+                GetComponent<PlayerMovementController>().setDoubleSpeed();
+            }
             animator.SetTrigger("UltFinished");
-            GetComponent<PlayerMovementController>().setDoubleSpeed();
         }
     }
     private void SkillProgress()

@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 4483154270306693808}
   - component: {fileID: 3825131268337933014}
   - component: {fileID: 4638250653771720876}
+  - component: {fileID: 5264867090502418610}
+  - component: {fileID: 2362754063160549098}
   m_Layer: 0
-  m_Name: Hacker
+  m_Name: Scientist
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +224,7 @@ Animator:
   m_GameObject: {fileID: 1282041049624855245}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 563a2baf5176c174e87f95179f281254, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75f079c81031fce418c0db17bb0d6e2c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -271,7 +273,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1842468304114138322, guid: c59c90214e97df044b05ae5590b2c823, type: 3}
+  m_Sprite: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
   m_Color: {r: 1, g: 0.97547174, b: 0.97547174, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -454,6 +456,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2362754063160549098}
+        m_TargetAssemblyTypeName: PlayerDebuffController, Assembly-CSharp
+        m_MethodName: HackerSkillFinished
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5264867090502418610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282041049624855245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770cfcd861a54a64e957ab29beab4208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9e942435947d7644d85a1c776e91fcdf, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2362754063160549098}
+        m_TargetAssemblyTypeName: PlayerDebuffController, Assembly-CSharp
+        m_MethodName: HackerSkillCasted
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2362754063160549098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282041049624855245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f24ba6a6706b5e4a9ba28339afb10f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5629801683221100583
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5629801683221100579}
   m_Layer: 0
-  m_Name: Hacker
+  m_Name: Scientist
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
