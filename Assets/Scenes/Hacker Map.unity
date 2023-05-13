@@ -433,6 +433,10 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -1679330401104697522, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.09
+      objectReference: {fileID: 0}
     - target: {fileID: -1071359958148435772, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_Range
       value: 7
@@ -449,6 +453,22 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -93912917512691172, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -93912917512691172, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -93912917512691172, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -93912917512691172, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6629797300637803691, guid: ae389a2da4a181b42a82dc858a929ade, type: 3}
     - target: {fileID: 919132149155446097, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_Name
       value: Hacker Map
