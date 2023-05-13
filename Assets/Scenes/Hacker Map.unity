@@ -307,7 +307,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_LocalPosition.x
@@ -506,6 +506,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6886176004035585669, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886176004035585669, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
@@ -516,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 6886176004035585669, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886176004035585669, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8165863434608227068, guid: 3b210774e19c1324ea7cf6d2c1eb6015, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1581,7 +1589,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1096115666
 GameObject:
