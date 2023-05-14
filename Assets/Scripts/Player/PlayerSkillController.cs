@@ -10,7 +10,7 @@ public class PlayerSkillController : MonoBehaviour
     [RequireInterface(typeof(Skill))]
     private Object _skill;
     private Skill skill => _skill as Skill;
-    private float skillCooldown = 1f;
+    private float skillCooldown = 30f;
     private float skillProgress = 0f;
     private bool isSkillReady = false;
     public GameEvent SkillCasted;
