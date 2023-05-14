@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject player1Prefab, player2Prefab;
     private PlayerInput Player1, Player2;
+    public PauseState pauseState = PauseState.UNPAUSED;
     void Awake()
     {
         var gamepadCount = Gamepad.all.Count;
@@ -48,4 +49,48 @@ public class PlayerManager : MonoBehaviour
 
         Player2.GetComponent<SpriteRenderer>().flipX = true;
     }
+
+    public void PauseGame(Component sender, object data)
+    {
+        if (pauseState == PauseState.UNPAUSED)
+        {
+            Time.timeScale = 0;
+            Player1.GetComponent<PlayerMovementController>().enabled = false;
+            Player1.GetComponent<PlayerShootController>().enabled =    false;
+            Player1.GetComponent<PlayerSkillController>().enabled =    false;
+            Player2.GetComponent<PlayerMovementController>().enabled = false;
+            Player2.GetComponent<PlayerShootController>().enabled =    false;
+            Player2.GetComponent<PlayerSkillController>().enabled =    false;
+            Player1.GetComponent<PauseControl>().isPaused = true;
+            Player2.GetComponent<PauseControl>().isPaused = true;
+            if (sender.GetComponent<PlayerController>().isPlayer1) pauseState = PauseState.PAUSED_BY_P1;
+            else pauseState = PauseState.PAUSED_BY_P2;
+        }
+    }
+
+    public void UnpauseGame(Component sender, object data)
+    {
+        bool pausedByP1 = sender.GetComponent<PlayerController>().isPlayer1;
+        if((pausedByP1 && pauseState == PauseState.PAUSED_BY_P1) || (!pausedByP1 && pauseState == PauseState.PAUSED_BY_P2))
+        {
+            Time.timeScale = 1;
+            Player1.GetComponent<PlayerMovementController>().enabled = true;
+            Player1.GetComponent<PlayerShootController>().enabled =    true;
+            Player1.GetComponent<PlayerSkillController>().enabled =    true;
+            Player2.GetComponent<PlayerMovementController>().enabled = true;
+            Player2.GetComponent<PlayerShootController>().enabled =    true;
+            Player2.GetComponent<PlayerSkillController>().enabled =    true;
+            Player1.GetComponent<PauseControl>().isPaused = false;
+            Player2.GetComponent<PauseControl>().isPaused = false;
+            pauseState = PauseState.UNPAUSED;
+        }
+    }
+}
+
+public enum PauseState
+{
+    UNPAUSED,
+    PAUSED_BY_P1,
+    PAUSED_BY_P2,
+    PAUSED_BY_GAME
 }
