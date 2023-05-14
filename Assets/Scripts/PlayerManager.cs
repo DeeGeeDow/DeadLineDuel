@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public PauseState pauseState = PauseState.UNPAUSED;
     void Awake()
     {
+        Time.timeScale = 1f;
         var gamepadCount = Gamepad.all.Count;
         if (gamepadCount >= 2)
         {
@@ -70,8 +71,10 @@ public class PlayerManager : MonoBehaviour
 
     public void UnpauseGame(Component sender, object data)
     {
-        bool pausedByP1 = sender.GetComponent<PlayerController>().isPlayer1;
-        if((pausedByP1 && pauseState == PauseState.PAUSED_BY_P1) || (!pausedByP1 && pauseState == PauseState.PAUSED_BY_P2))
+        bool unpausedByP1 = false;
+        if (sender is PauseControl) unpausedByP1 = sender.GetComponent<PlayerController>().isPlayer1;
+        else if (sender is PauseUIController) unpausedByP1 = ((PauseUIController)sender).isPlayer1;
+        if((unpausedByP1 && pauseState == PauseState.PAUSED_BY_P1) || (!unpausedByP1 && pauseState == PauseState.PAUSED_BY_P2))
         {
             Time.timeScale = 1;
             Player1.GetComponent<PlayerMovementController>().enabled = true;

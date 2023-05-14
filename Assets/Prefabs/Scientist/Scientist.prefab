@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 4638250653771720876}
   - component: {fileID: 5264867090502418610}
   - component: {fileID: 2362754063160549098}
+  - component: {fileID: 6703539632622928549}
   m_Layer: 0
   m_Name: Scientist
   m_TagString: Player
@@ -143,6 +144,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6703539632622928549}
+        m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
+        m_MethodName: onPauseOptionChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c9a615fd-d1fa-499c-b2b5-2096957b939b
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -150,6 +163,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6447162971151393540}
         m_TargetAssemblyTypeName: PlayerShootController, Assembly-CSharp
         m_MethodName: onShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6703539632622928549}
+        m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
+        m_MethodName: onPauseOptionChosen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -193,6 +218,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3f72ceea-df2b-4a3e-9c06-d2ebcdf53613
     m_ActionName: Player/Reload[/Keyboard/r,/Keyboard/slash]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6703539632622928549}
+        m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
+        m_MethodName: onPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 14ef99fa-f9a5-4658-a700-f82c9aa70be2
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard1
   m_DefaultActionMap: Player
@@ -508,6 +549,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f24ba6a6706b5e4a9ba28339afb10f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6703539632622928549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282041049624855245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ca16ea360e5eb43a3820b402d01e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseCD: 0.2
+  PauseEvent: {fileID: 11400000, guid: 030c956a2c97b444a8dba5824c9a0fd3, type: 2}
+  UnpauseEvent: {fileID: 11400000, guid: ff0c606bda4d945448dc70177889a3fe, type: 2}
+  PauseOptionChanged: {fileID: 11400000, guid: 58bfcb147bd9d504fb2e75c3ba83a202, type: 2}
+  PauseOptionChosen: {fileID: 11400000, guid: 9e1eb5e67da93524aa930280fe24b6a3, type: 2}
 --- !u!1 &5629801683221100583
 GameObject:
   m_ObjectHideFlags: 0
