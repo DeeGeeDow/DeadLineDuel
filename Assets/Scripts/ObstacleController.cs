@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,11 @@ public class ObstacleController : MonoBehaviour
     public Item? itemInside = null;
     public GameEvent PlayerGetItem;
     public GameEvent ObstacleDestroyed;
+#nullable disable
+    public event Action<ObstacleController> OnObstacleDestroyed;
+#nullable enable
+
+    public bool IsPooled = false;
 
     // Update is called once per frame
     void Update()
@@ -30,12 +36,19 @@ public class ObstacleController : MonoBehaviour
         }
         if (hp <= 0)
         {
+            OnObstacleDestroyed?.Invoke(this);
             ObstacleDestroyed.Raise(this, null);
             if (itemInside != null)
             {
                 PlayerGetItem.Raise(this, (other.gameObject.GetComponent<PlayerController>().isPlayer1, itemInside));
             }
-            Destroy(gameObject);
+            if (IsPooled)
+            {
+                gameObject.SetActive(false);
+            } else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
