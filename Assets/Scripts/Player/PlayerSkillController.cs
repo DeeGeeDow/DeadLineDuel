@@ -18,7 +18,7 @@ public class PlayerSkillController : MonoBehaviour
     private void Update()
     {
         SkillProgress();
-        if(skillButtonTriggered && isSkillReady) castSkill();
+        if (skillButtonTriggered && isSkillReady) castSkill();
     }
 
     public void onSkillCast(InputAction.CallbackContext context)
@@ -39,18 +39,20 @@ public class PlayerSkillController : MonoBehaviour
     public void SkillFinished(Component sender, object data)
     {
         // data consists "is the entire skill is finished?"
-        if (sender.GetComponent<PlayerController>().isPlayer1 == GetComponent<PlayerController>().isPlayer1)
+
+        // removed: obvious check (always true)??
+        //if (sender.GetComponent<PlayerController>().isPlayer1 == GetComponent<PlayerController>().isPlayer1)
+        //{
+        if ((bool)data)
         {
-            if ((bool)data)
-            {
-                GetComponent<PlayerMovementController>().setDoubleSpeed();
-            }
-            animator.SetTrigger("UltFinished");
+            GetComponent<PlayerMovementController>().setDoubleSpeed();
         }
+        animator.SetTrigger("UltFinished");
+        //}
     }
     private void SkillProgress()
     {
-        if(skillProgress < skillCooldown)
+        if (skillProgress < skillCooldown)
         {
             skillProgress += Time.deltaTime;
             //SkillProgressUpdated.Raise(this, skillProgress);
