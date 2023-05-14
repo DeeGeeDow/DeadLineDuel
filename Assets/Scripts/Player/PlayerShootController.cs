@@ -64,12 +64,17 @@ public class PlayerShootController : MonoBehaviour
     public void ShootAfterAnim()
     {
         var newPos = transform.position + new Vector3(1.1f, 0, 0) * ((this.isPlayer1) ? 1 : -1);
+        ShootAt(newPos);
+    }
+
+    public void ShootAt(Vector3 position)
+    {
         var bullet = Instantiate(bulletPrefab);
         bullet.GetComponent<BulletController>()
             .setIsPlayer1(this.isPlayer1)
-            .setPosition(newPos);
-
+            .setPosition(position);
     }
+
     public void reload()
     {
         if (bulletCount == maxBullet || isReloading)
