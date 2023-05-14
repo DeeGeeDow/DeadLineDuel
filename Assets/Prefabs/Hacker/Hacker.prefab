@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 4638250653771720876}
   - component: {fileID: 4634817506462811732}
   - component: {fileID: 3439946197498173641}
+  - component: {fileID: 3661453642151128320}
   m_Layer: 0
   m_Name: Hacker
   m_TagString: Player
@@ -193,6 +194,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3f72ceea-df2b-4a3e-9c06-d2ebcdf53613
     m_ActionName: Player/Reload[/Keyboard/r,/Keyboard/slash]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14ef99fa-f9a5-4658-a700-f82c9aa70be2
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard1
   m_DefaultActionMap: Player
@@ -509,6 +514,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f24ba6a6706b5e4a9ba28339afb10f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3661453642151128320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282041049624855245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ca16ea360e5eb43a3820b402d01e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseCD: 0.1
+  PauseEvent: {fileID: 11400000, guid: 030c956a2c97b444a8dba5824c9a0fd3, type: 2}
+  UnpauseEvent: {fileID: 11400000, guid: ff0c606bda4d945448dc70177889a3fe, type: 2}
 --- !u!1 &5629801683221100583
 GameObject:
   m_ObjectHideFlags: 0
