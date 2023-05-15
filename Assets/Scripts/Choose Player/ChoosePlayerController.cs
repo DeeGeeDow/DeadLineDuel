@@ -8,13 +8,16 @@ public class ChoosePlayerController : MonoBehaviour
 {
     public bool isPlayer1;
     private Vector2 chooseDirection;
-    private Vector2 playerPosition;
-    public float chooseDirectionCD;
+    [SerializeField] private Vector2 playerPosition;
+    public float chooseDirectionCD = 0.1f;
     public bool chooseDirectionAvailable = true;
     public PlayerTypes player;
-    public bool chosen;
+    public bool chosen = false;
     public GameEvent ChangedEvent;
     public GameEvent ChosenEvent;
+
+    public bool chooseAvailable = true;
+    public float chooseCD = 0.1f;
 
     [Header("Sprites")]
     public Sprite Scientist;
@@ -24,54 +27,56 @@ public class ChoosePlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerPosition = new Vector2(0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool changed = false;
-        if(chooseDirection.magnitude > 0 && chooseDirectionAvailable)
+        if (!chosen)
         {
-            chooseDirectionAvailable = false;
-            if(Mathf.Abs(chooseDirection.x) > Mathf.Abs(chooseDirection.y))
+            bool changed = false;
+            if(chooseDirection.magnitude > 0 && chooseDirectionAvailable)
             {
-                chooseDirection = new Vector2(Mathf.Sign(chooseDirection.x), 0);
-            }
-            else
+                chooseDirectionAvailable = false;
+                if(Mathf.Abs(chooseDirection.x) > Mathf.Abs(chooseDirection.y))
+                {
+                    chooseDirection = new Vector2(Mathf.Sign(chooseDirection.x), 0);
+                }
+                else
+                {
+                    chooseDirection = new Vector2(0, Mathf.Sign(chooseDirection.y));
+                }
+                changed = true;
+                StartCoroutine(ChooseDirectionCD());
+            }else if (!chooseDirectionAvailable)
             {
-                chooseDirection = new Vector2(0, Mathf.Sign(chooseDirection.y));
+                chooseDirection = new Vector2(0, 0);
             }
-            changed = true;
-            StartCoroutine(ChooseDirectionCD());
-        }else if (!chooseDirectionAvailable)
-        {
-            chooseDirection = new Vector2(0, 0);
-        }
 
-        playerPosition += chooseDirection;
-        if(playerPosition.x < 0)
-        {
-            playerPosition = new Vector2(0, playerPosition.y);
-            changed = false;
-        }
-        else if(playerPosition.x > 1)
-        {
-            playerPosition = new Vector2(1, playerPosition.y);
-            changed = false;
-        }
+            playerPosition += chooseDirection;
+            if(playerPosition.x < 0)
+            {
+                playerPosition = new Vector2(0, playerPosition.y);
+                changed = false;
+            }
+            else if(playerPosition.x > 1)
+            {
+                playerPosition = new Vector2(1, playerPosition.y);
+                changed = false;
+            }
 
-        if(playerPosition.y < 0)
-        {
-            playerPosition = new Vector2(playerPosition.x, 0);
-            changed = false;
-        }else if(playerPosition.y > 1)
-        {
-            playerPosition = new Vector2(playerPosition.x, 1);
-            changed = false;
-        }
+            if(playerPosition.y < 0)
+            {
+                playerPosition = new Vector2(playerPosition.x, 0);
+                changed = false;
+            }else if(playerPosition.y > 1)
+            {
+                playerPosition = new Vector2(playerPosition.x, 1);
+                changed = false;
+            }
 
-        changePlayer(changed);
+            changePlayer(changed);
+        }
     }
 
     public void changePlayer(bool changed)
@@ -116,5 +121,30 @@ public class ChoosePlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(chooseDirectionCD);
         chooseDirectionAvailable = true;
+    }
+
+    public void ChoosePlayer(InputAction.CallbackContext context)
+    {
+        if (context.action.triggered)
+        {
+            choose();
+        }
+    }
+
+    private void choose()
+    {
+        if(!chosen && chooseAvailable)
+        {
+            chooseAvailable = false;
+            chosen = true;
+            ChosenEvent.Raise(this, true);
+            StartCoroutine(chooseCoroutine());
+        }
+    }
+
+    private IEnumerator chooseCoroutine()
+    {
+        yield return new WaitForSeconds(chooseCD);
+        chooseAvailable = true;
     }
 }

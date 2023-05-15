@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ChoosePlayerManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ChoosePlayerManager : MonoBehaviour
     public PlayerTypes Player2;
     public PlayerInput Player1Input;
     public PlayerInput Player2Input;
+    public bool P1Chosen = false;
+    public bool P2Chosen = false;
 
 
     private void Awake()
@@ -39,8 +42,26 @@ public class ChoosePlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(P2Chosen & P1Chosen)
+        {
+            SceneManager.LoadScene("Hacker Map");
+        }
     }
 
+    public void ChosenChara(Component sender, object data)
+    {
+        if(sender is ChoosePlayerController)
+        {
+            bool p1 = ((ChoosePlayerController)sender).isPlayer1;
+            if (p1)
+            {
+                P1Chosen = (bool) data;
+            }
+            else
+            {
+                P2Chosen = (bool) data;
+            }
+        }
+    }
     
 }

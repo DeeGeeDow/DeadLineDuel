@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349309e1bbb4a0a439fef9983c403a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerToShow: 0
+  playerToShow: 1
   isPlayer1: 0
   ScientistSprite: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
   HackerSprite: {fileID: 342900966683265971, guid: c757e159cbc80a245acfd916f1774ec2, type: 3}
@@ -780,6 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765097762}
   - component: {fileID: 765097761}
+  - component: {fileID: 765097763}
   m_Layer: 0
   m_Name: Player Manager
   m_TagString: Untagged
@@ -803,6 +804,8 @@ MonoBehaviour:
   Player2: 0
   Player1Input: {fileID: 889688238}
   Player2Input: {fileID: 2144887445}
+  P1Chosen: 0
+  P2Chosen: 0
 --- !u!4 &765097762
 Transform:
   m_ObjectHideFlags: 0
@@ -817,6 +820,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765097763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765097760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770cfcd861a54a64e957ab29beab4208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3aba1fd4271ef8241b3ee35b3bd6d17b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765097761}
+        m_TargetAssemblyTypeName: ChoosePlayerManager, Assembly-CSharp
+        m_MethodName: ChosenChara
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &889688235
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,12 +894,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 1
+  playerPosition: {x: 0, y: 1}
   chooseDirectionCD: 0.2
   chooseDirectionAvailable: 1
   player: 0
   chosen: 0
   ChangedEvent: {fileID: 11400000, guid: 0b2b7877248563b4eb569e0c68095e62, type: 2}
-  ChosenEvent: {fileID: 0}
+  ChosenEvent: {fileID: 11400000, guid: 3aba1fd4271ef8241b3ee35b3bd6d17b, type: 2}
+  chooseAvailable: 1
+  chooseCD: 0.1
   Scientist: {fileID: 21300000, guid: 2a753309e5a51d14599a4afd88e5bc10, type: 3}
   Hacker: {fileID: 21300000, guid: 57db7faf8124aee418eb6d0afd21645d, type: 3}
   Engineer: {fileID: 21300000, guid: 5baee8aa956f7f64b8e9c1cf49ee3ff6, type: 3}
@@ -915,7 +949,19 @@ MonoBehaviour:
     m_ActionId: c9a615fd-d1fa-499c-b2b5-2096957b939b
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 889688237}
+        m_TargetAssemblyTypeName: ChoosePlayerController, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0bbabc69-ef20-4c89-ba01-86d831e416a8
     m_ActionName: Player/Shoot[/Keyboard/f,/Keyboard/semicolon]
   - m_PersistentCalls:
@@ -1559,12 +1605,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 0
+  playerPosition: {x: 0, y: 0}
   chooseDirectionCD: 0
   chooseDirectionAvailable: 1
   player: 0
   chosen: 0
   ChangedEvent: {fileID: 0}
   ChosenEvent: {fileID: 0}
+  chooseAvailable: 0
+  chooseCD: 0.1
   Scientist: {fileID: 0}
   Hacker: {fileID: 0}
   Engineer: {fileID: 0}
@@ -1615,12 +1664,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 0
+  playerPosition: {x: 1, y: 1}
   chooseDirectionCD: 0.2
   chooseDirectionAvailable: 1
   player: 0
   chosen: 0
   ChangedEvent: {fileID: 11400000, guid: 0b2b7877248563b4eb569e0c68095e62, type: 2}
-  ChosenEvent: {fileID: 0}
+  ChosenEvent: {fileID: 11400000, guid: 3aba1fd4271ef8241b3ee35b3bd6d17b, type: 2}
+  chooseAvailable: 1
+  chooseCD: 0.1
   Scientist: {fileID: 21300000, guid: 26c09c72f8c4ec248bca4e9cc7baaad0, type: 3}
   Hacker: {fileID: 21300000, guid: ae52d50324dc308419e1a3ed290fdbba, type: 3}
   Engineer: {fileID: 21300000, guid: cf5dc46831c82cf4c87636fdea30c59d, type: 3}
@@ -1667,7 +1719,19 @@ MonoBehaviour:
     m_ActionId: c9a615fd-d1fa-499c-b2b5-2096957b939b
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144887444}
+        m_TargetAssemblyTypeName: ChoosePlayerController, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0bbabc69-ef20-4c89-ba01-86d831e416a8
     m_ActionName: Player/Shoot[/Keyboard/f,/Keyboard/semicolon]
   - m_PersistentCalls:
