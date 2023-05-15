@@ -116,10 +116,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4069457491366840242, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3759157360906358228}
     - target: {fileID: 5822967551954206810, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 54f353ba38c479a4c8ce86b43b9fc8af, type: 2}
+    - target: {fileID: 6208342015085664580, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208342015085664580, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: 1399b828-325e-4c47-85e0-86b333a8e6d4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208342015085664580, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: Player/Item[/Keyboard/q,/Keyboard/u,/XInputControllerWindows/buttonNorth]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4698778424898348446, guid: a1d73c490e400c943b22609f37e4c8a0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
 --- !u!4 &7199517202633004031 stripped
@@ -138,3 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e362fb339beb22418ddc54297b195db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3759157360906358228 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5822967551954206810, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+  m_PrefabInstance: {fileID: 7270045172757761422}
+  m_PrefabAsset: {fileID: 0}

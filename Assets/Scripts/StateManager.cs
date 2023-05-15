@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class StateManager : MonoBehaviour
 {
     public static StateManager instance;
-    private GameObject Player1;
-    private GameObject Player2;
+    [SerializeField] private GameObject Player1;
+    [SerializeField] private GameObject Player2;
     private Sprite P1Head;
     private Sprite P2Head;
     private Sprite WinnerBody;
@@ -54,6 +54,17 @@ public class StateManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+    }
+
+    public void Start()
+    {
+        p1 = PlayerTypes.SCIENTIST;
+        p2 = PlayerTypes.HACKER;
+        Player1 = Scientist;
+        Player2 = Hacker;
+        P1Head = ScientistHead;
+        P2Head = HackerHead;
+        Debug.Log(Player2);
     }
 
     public GameObject GetPlayer1()

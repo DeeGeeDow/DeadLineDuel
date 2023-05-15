@@ -21,11 +21,15 @@ public class HackerSkill : MonoBehaviour, Skill
         //delay.setDuration(skillDelay);
         //delay.setOperation(beginSkill);
 
+        animationCD.setDuration(animationSkillDuration);
+        animationCD.setOperation(afterAnimationFinsihed);
+
         beginSkill();
 
         Debug.Log("Hacker Skill casted");
         //StartCoroutine(delay.start());
         StartCoroutine(cooldown.start());
+        StartCoroutine(animationCD.start());
     }
 
     public void beginSkill()
@@ -48,6 +52,7 @@ public class HackerSkill : MonoBehaviour, Skill
     }
     public void afterAnimationFinsihed()
     {
+        Debug.Log("aodskamfamof");
         Destroy(skill);
         skillFinished.Raise(this, false);
     }

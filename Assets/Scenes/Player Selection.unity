@@ -1188,13 +1188,29 @@ MonoBehaviour:
     m_ActionId: d40dcc63-13eb-4f81-b7fd-ac5f95f498d5
     m_ActionName: Player/Skill[/Keyboard/e,/Keyboard/o]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 889688237}
+        m_TargetAssemblyTypeName: ChoosePlayerController, Assembly-CSharp
+        m_MethodName: UnchoosePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3f72ceea-df2b-4a3e-9c06-d2ebcdf53613
     m_ActionName: Player/Reload[/Keyboard/r,/Keyboard/p]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 14ef99fa-f9a5-4658-a700-f82c9aa70be2
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1399b828-325e-4c47-85e0-86b333a8e6d4
+    m_ActionName: Player/Item[/Keyboard/q,/Keyboard/u]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard1
   m_DefaultActionMap: Player
@@ -1984,6 +2000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4336edae71a183408b561f9ac3508ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
   Scientist: {fileID: 5629801683221100583, guid: 9bc020303f6f03c499700154ab89155a, type: 3}
   Hacker: {fileID: 5629801683221100583, guid: 558fb511f4f6a4f4d8238327825b5b3f, type: 3}
   Engineer: {fileID: 7941098849745697446, guid: 7b1df472f7ec6cc4b9a2d74f89da728f, type: 3}
@@ -1999,6 +2017,8 @@ MonoBehaviour:
   isGameFinished: 0
   isGameStarted: 0
   isPlayer1Win: 0
+  controlScheme1: 
+  controlScheme2: 
 --- !u!114 &1894941228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,7 +2205,7 @@ MonoBehaviour:
   playerPosition: {x: 1, y: 1}
   chooseDirectionCD: 0.2
   chooseDirectionAvailable: 1
-  player: 0
+  player: 1
   chosen: 0
   ChangedEvent: {fileID: 11400000, guid: 0b2b7877248563b4eb569e0c68095e62, type: 2}
   ChosenEvent: {fileID: 11400000, guid: 3aba1fd4271ef8241b3ee35b3bd6d17b, type: 2}
@@ -2257,13 +2277,29 @@ MonoBehaviour:
     m_ActionId: d40dcc63-13eb-4f81-b7fd-ac5f95f498d5
     m_ActionName: Player/Skill[/Keyboard/e,/Keyboard/o]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144887444}
+        m_TargetAssemblyTypeName: ChoosePlayerController, Assembly-CSharp
+        m_MethodName: UnchoosePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3f72ceea-df2b-4a3e-9c06-d2ebcdf53613
     m_ActionName: Player/Reload[/Keyboard/r,/Keyboard/p]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 14ef99fa-f9a5-4658-a700-f82c9aa70be2
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1399b828-325e-4c47-85e0-86b333a8e6d4
+    m_ActionName: Player/Item[/Keyboard/q,/Keyboard/u]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard2
   m_DefaultActionMap: Player

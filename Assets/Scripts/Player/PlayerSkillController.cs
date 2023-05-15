@@ -43,7 +43,7 @@ public class PlayerSkillController : MonoBehaviour
         // removed: obvious check (always true)??
         //if (sender.GetComponent<PlayerController>().isPlayer1 == GetComponent<PlayerController>().isPlayer1)
         //{
-        if ((bool)data)
+        if ((bool)data && sender.GetComponentInChildren<PlayerController>().isPlayer1 == GetComponent<PlayerController>().isPlayer1)
         {
             GetComponent<PlayerMovementController>().setDoubleSpeed();
         }

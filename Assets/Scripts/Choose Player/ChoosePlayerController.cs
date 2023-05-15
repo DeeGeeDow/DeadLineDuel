@@ -131,6 +131,14 @@ public class ChoosePlayerController : MonoBehaviour
         }
     }
 
+    public void UnchoosePlayer(InputAction.CallbackContext context)
+    {
+        if (context.action.triggered)
+        {
+            unchoose();
+        }
+    }
+
     private void choose()
     {
         if(!chosen && chooseAvailable)
@@ -138,6 +146,17 @@ public class ChoosePlayerController : MonoBehaviour
             chooseAvailable = false;
             chosen = true;
             ChosenEvent.Raise(this, true);
+            StartCoroutine(chooseCoroutine());
+        }
+    }
+
+    private void unchoose()
+    {
+        if(chosen && chooseAvailable)
+        {
+            chooseAvailable = false;
+            chosen = false;
+            ChosenEvent.Raise(this, false);
             StartCoroutine(chooseCoroutine());
         }
     }

@@ -7,6 +7,8 @@ public class PlayerDebuffController : MonoBehaviour
     private void EnableAttack(bool isEnabled)
     {
         GetComponent<PlayerShootController>().enabled = isEnabled;
+        //if (isEnabled) Debug.Log("mati");
+        //else Debug.Log("nyala");
     }
 
     private void EnableMovement(bool isEnabled)
@@ -16,20 +18,24 @@ public class PlayerDebuffController : MonoBehaviour
 
     public void HackerSkillCasted(Component sender, object data)
     {
-        if (sender is HackerSkill && sender.GetComponent<PlayerController>().isPlayer1 != sender.GetComponent<PlayerController>().isPlayer1)
+        if (sender is HackerSkill && sender.GetComponent<PlayerController>().isPlayer1 != GetComponent<PlayerController>().isPlayer1)
         {
+            //Debug.Log("Harusnya awl awl");
             EnableAttack(false);
+            GetComponent<SpriteRenderer>().color = new Color(130, 141,188);
         }
     }
 
     public void HackerSkillFinished(Component sender, object data)
     {
         // data consists "is the entire skill is finished?"
-        if (sender is HackerSkill && sender.GetComponent<PlayerController>().isPlayer1 != sender.GetComponent<PlayerController>().isPlayer1)
+        if (sender is HackerSkill && sender.GetComponent<PlayerController>().isPlayer1 != GetComponent<PlayerController>().isPlayer1)
         {
             if((bool)data)
             {
                 EnableAttack(true);
+                GetComponent<SpriteRenderer>().color = new Color(255,255,255);
+                //Debug.Log("Harusnya akhir kahir");
             }
         }
     }

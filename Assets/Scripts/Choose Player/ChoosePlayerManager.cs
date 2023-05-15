@@ -43,7 +43,8 @@ public class ChoosePlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player1 = PlayerTypes.SCIENTIST;
+        Player2 = PlayerTypes.HACKER;
     }
 
     // Update is called once per frame
