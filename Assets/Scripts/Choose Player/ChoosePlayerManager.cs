@@ -13,6 +13,7 @@ public class ChoosePlayerManager : MonoBehaviour
     public bool P1Chosen = false;
     public bool P2Chosen = false;
 
+    public GameEvent GameStart;
 
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class ChoosePlayerManager : MonoBehaviour
         else if (gamepad == 1)
         {
             Player1Input.SwitchCurrentControlScheme("Keyboard1", Keyboard.current);
-            Player2Input.SwitchCurrentControlScheme("Gamepad", Gamepad.all[1]);
+            Player2Input.SwitchCurrentControlScheme("Gamepad", Gamepad.all[0]);
         }
         else
         {
@@ -44,8 +45,11 @@ public class ChoosePlayerManager : MonoBehaviour
     {
         if(P2Chosen & P1Chosen)
         {
+            PlayerTypes[] players = { Player1, Player2 };
+            GameStart.Raise(this, players);
             SceneManager.LoadScene("Hacker Map");
         }
+
     }
 
     public void ChosenChara(Component sender, object data)
@@ -56,10 +60,12 @@ public class ChoosePlayerManager : MonoBehaviour
             if (p1)
             {
                 P1Chosen = (bool) data;
+                Player1 = ((ChoosePlayerController)sender).player;
             }
             else
             {
                 P2Chosen = (bool) data;
+                Player2 = ((ChoosePlayerController)sender).player;
             }
         }
     }

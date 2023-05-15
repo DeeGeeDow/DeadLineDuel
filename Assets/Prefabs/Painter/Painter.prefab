@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: _skill
       value: 
       objectReference: {fileID: 7478032692912651726}
+    - target: {fileID: 1735372795233249193, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a4d11d86bcecd749a2f3c0fad74d925, type: 3}
     - target: {fileID: 2589977241381791481, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -115,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 5822967551954206810, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 563a2baf5176c174e87f95179f281254, type: 2}
+      objectReference: {fileID: 9100000, guid: 54f353ba38c479a4c8ce86b43b9fc8af, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
 --- !u!4 &7199517202633004031 stripped

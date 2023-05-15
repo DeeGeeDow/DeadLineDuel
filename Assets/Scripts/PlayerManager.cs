@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
     public GameObject player1Prefab, player2Prefab;
     private PlayerInput Player1, Player2;
     public PauseState pauseState = PauseState.UNPAUSED;
+    public Image Player1Head, Player2Head;
     void Awake()
     {
         Time.timeScale = 1f;
         var gamepadCount = Gamepad.all.Count;
+        StateManager stateMan = GameObject.Find("State").GetComponent<StateManager>();
+        player1Prefab = stateMan.GetPlayer1();
+        player2Prefab = stateMan.GetPlayer2();
+        Player1Head.sprite = stateMan.GetPlayer1Head();
+        Player2Head.sprite = stateMan.GetPlayer2Head();
         if (gamepadCount >= 2)
         {
             Player1 = PlayerInput.Instantiate(player1Prefab, controlScheme: "Gamepad", pairWithDevice: Gamepad.all[0]);
