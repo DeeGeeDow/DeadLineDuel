@@ -19,7 +19,7 @@ public class ObstacleManager : MonoBehaviour
     }
     private void Start()
     {
-        startSpawnObstacle();
+        //startSpawnObstacle();
     }
 
     void spawnObstacle()
