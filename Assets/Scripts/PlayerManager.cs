@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -10,11 +11,17 @@ public class PlayerManager : MonoBehaviour
     private PlayerInput Player1, Player2;
     public PauseState pauseState = PauseState.UNPAUSED;
     public Image Player1Head, Player2Head;
+    public bool gameEnded = false;
+    public bool isPlayer1Win = false;
+    private StateManager stateMan;
+    public GameEvent ShowVictory;
+    public GameEvent ShowReady;
+    public float victoryShowDuration;
     void Awake()
     {
         Time.timeScale = 1f;
         var gamepadCount = Gamepad.all.Count;
-        StateManager stateMan = GameObject.Find("State").GetComponent<StateManager>();
+        stateMan = GameObject.Find("State").GetComponent<StateManager>();
         player1Prefab = stateMan.GetPlayer1();
         player2Prefab = stateMan.GetPlayer2();
         Player1Head.sprite = stateMan.GetPlayer1Head();
@@ -94,6 +101,47 @@ public class PlayerManager : MonoBehaviour
             Player2.GetComponent<PauseControl>().isPaused = false;
             pauseState = PauseState.UNPAUSED;
         }
+    }
+
+    public void PauseByGame(bool pause)
+    {
+        if (pause) 
+        {
+            Time.timeScale = 0;
+            pauseState = PauseState.PAUSED_BY_GAME;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseState = PauseState.UNPAUSED;
+        }
+    }
+
+    public void Victory()
+    {
+        ShowVictory.Raise(this, null);
+        StartCoroutine(VictoryCoroutine());
+    }
+
+    public void Update()
+    {
+        if (gameEnded) Victory();
+    }
+    public void onChangedHeart(Component sender, object data)
+    {
+        // someone is dying
+        if(sender is PlayerHeartController && (int)data <= 0 && !gameEnded)
+        {
+            gameEnded = true;
+            isPlayer1Win = !(sender.GetComponent<PlayerController>().isPlayer1);
+            stateMan.isGameFinished = true;
+            stateMan.isPlayer1Win = isPlayer1Win;
+        }
+    }
+    private IEnumerator VictoryCoroutine()
+    {
+        yield return new WaitForSeconds(victoryShowDuration);
+        SceneManager.LoadScene("Winning Scene");
     }
 }
 

@@ -40,7 +40,7 @@ public class PlayerHeartController : MonoBehaviour
     {
         gameObject.GetComponent<PlayerShootController>().enabled = false;
         gameObject.GetComponent<PlayerMovementController>().enabled = false;
-        //gameObject.GetComponent<PlayerSkillController>().enabled = false;
+        gameObject.GetComponent<PlayerSkillController>().enabled = false;
         animator.SetTrigger("Die");
     }
     private void hit()

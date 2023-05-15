@@ -35,7 +35,8 @@ public class StartTextController : MonoBehaviour
 
         if (inputAllowed)
         {
-            InputSystem.onAnyButtonPress.CallOnce(e => { SceneManager.LoadScene("Player Selection"); });
+            InputSystem.onAnyButtonPress.CallOnce(e => { SceneManager.LoadScene("Player Selection"); Debug.Log("Dari Dalem"); });
+            Debug.Log("Test");
 
         }
     }

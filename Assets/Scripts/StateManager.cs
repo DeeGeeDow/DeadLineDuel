@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StateManager : MonoBehaviour
 {
+    public static StateManager instance;
     private GameObject Player1;
     private GameObject Player2;
     private Sprite P1Head;
     private Sprite P2Head;
+    private Sprite WinnerBody;
+    private PlayerTypes p1;
+    private PlayerTypes p2;
 
     [Header("Prefabs")]
     public GameObject Scientist;
@@ -15,15 +20,40 @@ public class StateManager : MonoBehaviour
     public GameObject Engineer;
     public GameObject Painter;
 
-    [Header("Sprite")]
+    [Header("Head Sprite")]
     public Sprite ScientistHead;
     public Sprite HackerHead;
     public Sprite EngineerHead;
     public Sprite PainterHead;
 
+    [Header("Full Body Sprite")]
+    public Sprite ScientistBody;
+    public Sprite HackerBody;
+    public Sprite EngineerBody;
+    public Sprite PainterBody;
+
+    [Header("Game State")]
+    public bool isGameFinished = false;
+    public bool isGameStarted = false;
+    public bool isPlayer1Win = false;
+
+    [Header("Input Scheme and Device")]
+    public string controlScheme1;
+    public string controlScheme2;
+    public InputDevice device1;
+    public InputDevice device2;
+
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     public GameObject GetPlayer1()
@@ -44,6 +74,58 @@ public class StateManager : MonoBehaviour
     public Sprite GetPlayer2Head()
     {
         return P2Head;
+    }
+
+    public Sprite GetWinnerBody()
+    {
+        if (isPlayer1Win)
+        {
+            switch (p1)
+            {
+                case PlayerTypes.SCIENTIST:
+                    WinnerBody = ScientistBody;
+                    break;
+                case PlayerTypes.HACKER:
+                    WinnerBody = HackerBody;
+                    break;
+                case PlayerTypes.ENGINEER:
+                    WinnerBody = EngineerBody;
+                    break;
+                case PlayerTypes.PAINTER:
+                    WinnerBody = PainterBody;
+                    break;
+                default:
+                    WinnerBody = ScientistBody;
+                    break;
+            }
+        }
+        else
+        {
+            switch (p2)
+            {
+                case PlayerTypes.SCIENTIST:
+                    WinnerBody = ScientistBody;
+                    break;
+                case PlayerTypes.HACKER:
+                    WinnerBody = HackerBody;
+                    break;
+                case PlayerTypes.ENGINEER:
+                    WinnerBody = EngineerBody;
+                    break;
+                case PlayerTypes.PAINTER:
+                    WinnerBody = PainterBody;
+                    break;
+                default:
+                    WinnerBody = ScientistBody;
+                    break;
+            }
+        }
+        return WinnerBody;
+    }
+
+    public PlayerTypes GetWinner()
+    {
+        return (isPlayer1Win) ? p1 : p2;
     }
 
     public void AssignPlayer(Component sender, object data)
@@ -97,6 +179,8 @@ public class StateManager : MonoBehaviour
                     P2Head = ScientistHead;
                     break;
             }
+            p1 = players[0];
+            p2 = players[1];
         }
     }
 }

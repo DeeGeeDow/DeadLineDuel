@@ -1992,6 +1992,13 @@ MonoBehaviour:
   HackerHead: {fileID: 21300000, guid: 3175812a31742a64d94409e6b63bffb0, type: 3}
   EngineerHead: {fileID: 21300000, guid: e9da03e6ae72cc2439c555fa4dff815e, type: 3}
   PainterHead: {fileID: 21300000, guid: ecf94ad43a43c584cb8719d36f2d99e5, type: 3}
+  ScientistBody: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
+  HackerBody: {fileID: 342900966683265971, guid: c757e159cbc80a245acfd916f1774ec2, type: 3}
+  EngineerBody: {fileID: 21300000, guid: 6e18455708d0b7a4a8e507324aff3ca0, type: 3}
+  PainterBody: {fileID: 21300000, guid: 6a4d11d86bcecd749a2f3c0fad74d925, type: 3}
+  isGameFinished: 0
+  isGameStarted: 0
+  isPlayer1Win: 0
 --- !u!114 &1894941228
 MonoBehaviour:
   m_ObjectHideFlags: 0

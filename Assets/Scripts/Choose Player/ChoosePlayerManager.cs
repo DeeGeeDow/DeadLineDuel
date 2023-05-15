@@ -33,6 +33,12 @@ public class ChoosePlayerManager : MonoBehaviour
             Player1Input.SwitchCurrentControlScheme("Keyboard1", Keyboard.current);
             Player2Input.SwitchCurrentControlScheme("Keyboard2", Keyboard.current);
         }
+
+        var stateMan = GameObject.Find("State").GetComponent<StateManager>();
+        stateMan.controlScheme1 = Player1Input.currentControlScheme;
+        stateMan.controlScheme2 = Player2Input.currentControlScheme;
+        stateMan.device1 = Player1Input.devices[0];
+        stateMan.device2 = Player2Input.devices[0];
     }
     // Start is called before the first frame update
     void Start()
