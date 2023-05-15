@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseUIController : MonoBehaviour
 {
     public bool isPlayer1;
     public bool isPaused = false;
     public PauseOption option;
+    public GameEvent UnpauseEvent;
 
 
     [Header("Sprites")]
@@ -99,6 +101,12 @@ public class PauseUIController : MonoBehaviour
 
     private void ResumeChosen()
     {
+        Resume();
+        UnpauseEvent.Raise(this, null);
+    }
+
+    public void Resume()
+    {
         isPaused = false;
         foreach (Transform child in transform)
         {
@@ -115,7 +123,7 @@ public class PauseUIController : MonoBehaviour
 
     private void RestartChosen()
     {
-
+        SceneManager.LoadScene("Hacker Map");
     }
 
     private void ExitHover()
@@ -132,9 +140,9 @@ public class PauseUIController : MonoBehaviour
 
     public void UnpauseTriggered(Component sender, object data)
     {
-        if(sender.GetComponent<PlayerController>().isPlayer1 == isPlayer1 && isPaused)
+        if(sender is PauseControl && sender.GetComponent<PlayerController>().isPlayer1 == isPlayer1 && isPaused)
         {
-            ResumeChosen();
+            Resume();
         }
     }
 

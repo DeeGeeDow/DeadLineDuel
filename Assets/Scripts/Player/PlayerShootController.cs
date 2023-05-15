@@ -35,6 +35,12 @@ public class PlayerShootController : MonoBehaviour
         Shoot();
     }
 
+    private void OnEnable()
+    {
+        shootAvailable = false;
+        StartCoroutine(StartCooldown(shootCooldown, () => { shootAvailable = true; }));
+    }
+
     public void onShoot(InputAction.CallbackContext context)
     {
         shootButtonTriggered = context.action.triggered;

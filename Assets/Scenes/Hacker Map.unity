@@ -1891,10 +1891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2075,6 +2075,7 @@ MonoBehaviour:
   isPlayer1: 0
   isPaused: 0
   option: 0
+  UnpauseEvent: {fileID: 11400000, guid: ff0c606bda4d945448dc70177889a3fe, type: 2}
   ResumeSpriteIdle: {fileID: 21300000, guid: 9cd4a3448b1ed8e42884625067655897, type: 3}
   ResumeSpriteHover: {fileID: 21300000, guid: d2db6ae4c05a7094abb69a293052a873, type: 3}
   RestartSpriteIdle: {fileID: 21300000, guid: 5ce564b2de4ad424ea5aa7ce5a99ee4e, type: 3}
@@ -3209,9 +3210,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5121f08214f801148bb9e77526868602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Prefab: {fileID: 5629801683221100583, guid: dee26c5d0bd33e14cbd5ac5bb9bcb02d, type: 3}
+  player1Prefab: {fileID: 5629801683221100583, guid: 9bc020303f6f03c499700154ab89155a, type: 3}
   player2Prefab: {fileID: 5629801683221100583, guid: 558fb511f4f6a4f4d8238327825b5b3f, type: 3}
   pauseState: 0
+  Player1Head: {fileID: 142632173}
+  Player2Head: {fileID: 1332639140}
 --- !u!114 &1353056929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3920,10 +3923,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
