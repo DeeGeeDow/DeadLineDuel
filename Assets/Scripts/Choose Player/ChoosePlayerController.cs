@@ -24,6 +24,11 @@ public class ChoosePlayerController : MonoBehaviour
     public Sprite Hacker;
     public Sprite Engineer;
     public Sprite Painter;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip changeClip;
+    public AudioClip chooseClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,7 +88,7 @@ public class ChoosePlayerController : MonoBehaviour
     {
         if (changed)
         {
-            Debug.Log("Masuk");
+            audioSource.PlayOneShot(changeClip);
             int positionFlattened = (int)playerPosition.x + (int)playerPosition.y * 2;
             Image image = GetComponentInChildren<Image>();
             switch (positionFlattened)
@@ -143,6 +148,7 @@ public class ChoosePlayerController : MonoBehaviour
     {
         if(!chosen && chooseAvailable)
         {
+            audioSource.PlayOneShot(chooseClip);
             chooseAvailable = false;
             chosen = true;
             ChosenEvent.Raise(this, true);

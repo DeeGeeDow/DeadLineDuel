@@ -16,7 +16,13 @@ public class PlayerManager : MonoBehaviour
     private StateManager stateMan;
     public GameEvent ShowVictory;
     public GameEvent ShowReady;
-    public float victoryShowDuration;
+    public float victoryShowDuration = 5f;
+    public AudioSource audioSource;
+    public AudioClip ReadyGo;
+    public AudioClip GameBGM;
+    public AudioClip VictoryAudio;
+    public float ReadyGoDuration = 4f;
+    public float VictoryAudioDelay = 3f;
     void Awake()
     {
         Time.timeScale = 1f;
@@ -119,8 +125,27 @@ public class PlayerManager : MonoBehaviour
 
     public void Victory()
     {
+        PauseByGame(true);
+        audioSource.Pause();
+        audioSource.clip = VictoryAudio;
+        audioSource.PlayDelayed(VictoryAudioDelay);
         ShowVictory.Raise(this, null);
         StartCoroutine(VictoryCoroutine());
+    }
+
+    public void Start()
+    {
+        PauseByGame(true);
+        audioSource.PlayOneShot(ReadyGo);
+        StartCoroutine(ReadyGoCoroutine());
+    }
+
+    public IEnumerator ReadyGoCoroutine()
+    {
+        yield return new WaitForSecondsRealtime(ReadyGoDuration);
+        PauseByGame(false);
+        audioSource.clip = GameBGM;
+        audioSource.Play();
     }
 
     public void Update()
@@ -140,7 +165,7 @@ public class PlayerManager : MonoBehaviour
     }
     private IEnumerator VictoryCoroutine()
     {
-        yield return new WaitForSeconds(victoryShowDuration);
+        yield return new WaitForSecondsRealtime(victoryShowDuration + VictoryAudioDelay);
         SceneManager.LoadScene("Winning Scene");
     }
 }

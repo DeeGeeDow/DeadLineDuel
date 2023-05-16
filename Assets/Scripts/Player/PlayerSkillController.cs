@@ -15,6 +15,8 @@ public class PlayerSkillController : MonoBehaviour
     private bool isSkillReady = false;
     public GameEvent SkillCasted;
     public Animator animator;
+    public AudioClip skillAudio;
+    public AudioSource audioSource;
     private void Update()
     {
         SkillProgress();
@@ -28,6 +30,7 @@ public class PlayerSkillController : MonoBehaviour
 
     private void castSkill()
     {
+        audioSource.PlayOneShot(skillAudio);
         skill.onCast();
         animator.SetTrigger("Ult");
         this.isSkillReady = false;

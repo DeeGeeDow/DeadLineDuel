@@ -7,6 +7,7 @@ public class PlayerHeartController : MonoBehaviour
     [SerializeField] private int heart = 3;
     public GameEvent onPlayerHealthChanged;
     public AudioClip HitSFX;
+    public AudioClip DieSFX;
     public float tinungTinungDuration = 1f;
     private AudioSource audioSource;
     public Animator animator;
@@ -38,6 +39,7 @@ public class PlayerHeartController : MonoBehaviour
 
     private void Die()
     {
+        audioSource.PlayOneShot(DieSFX);
         gameObject.GetComponent<PlayerShootController>().enabled = false;
         gameObject.GetComponent<PlayerMovementController>().enabled = false;
         gameObject.GetComponent<PlayerSkillController>().enabled = false;

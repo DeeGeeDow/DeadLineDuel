@@ -15,15 +15,22 @@ public class PauseUIController : MonoBehaviour
 
     [Header("Sprites")]
     public Sprite ResumeSpriteIdle;
-    public Sprite ResumeSpriteHover;
+    public Sprite ResumeSpritePress;
     public Sprite RestartSpriteIdle;
-    public Sprite RestartSpriteHover;
+    public Sprite RestartSpritePress;
     public Sprite ExitSpriteIdle;
-    public Sprite ExitSpriteHover;
+    public Sprite ExitSpritePress;
 
     public Image resumeImage;
     public Image restartImage;
     public Image exitImage;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip switchClip;
+    public AudioClip pressClip;
+
+    public float pressCD = 0.1f;
 
     public void Update()
     {
@@ -94,15 +101,17 @@ public class PauseUIController : MonoBehaviour
 
     private void ResumeHover()
     {
-        resumeImage.sprite = ResumeSpriteHover;
-        restartImage.sprite = RestartSpriteIdle;
-        exitImage.sprite = ExitSpriteIdle;
+        resumeImage.color = new Color(200, 200, 200);
     }
 
     private void ResumeChosen()
     {
-        Resume();
-        UnpauseEvent.Raise(this, null);
+        resumeImage.sprite = ResumeSpritePress;
+        StartCoroutine(Wait(pressCD, () =>
+        {
+            Resume();
+            UnpauseEvent.Raise(this, null);
+        }));
     }
 
     public void Resume()
@@ -116,26 +125,30 @@ public class PauseUIController : MonoBehaviour
     
     private void RestartHover()
     {
-        resumeImage.sprite = ResumeSpriteIdle;
-        restartImage.sprite = RestartSpriteHover;
-        exitImage.sprite = ExitSpriteIdle;
+        restartImage.color = new Color(200, 200, 200);
     }
 
     private void RestartChosen()
     {
-        SceneManager.LoadScene("Hacker Map");
+        restartImage.sprite = RestartSpritePress;
+        StartCoroutine(Wait(pressCD, () =>
+        {
+            SceneManager.LoadScene("Hacker Map");
+        }));
     }
 
     private void ExitHover()
     {
-        resumeImage.sprite = ResumeSpriteIdle;
-        restartImage.sprite = RestartSpriteIdle;
-        exitImage.sprite = ExitSpriteHover;
+        exitImage.color = new Color(200, 200, 200);
     }
 
     private void ExitChosen()
     {
-
+        exitImage.sprite = ExitSpritePress;
+        StartCoroutine(Wait(pressCD, () =>
+        {
+            SceneManager.LoadScene("Start Menu");
+        }));
     }
 
     public void UnpauseTriggered(Component sender, object data)
@@ -154,11 +167,19 @@ public class PauseUIController : MonoBehaviour
             int numOfOptions = System.Enum.GetNames(typeof(PauseOption)).Length;
             if ((float) data < 0)
             {
-                if ((int)option < numOfOptions - 1) option++;
+                if ((int)option < numOfOptions - 1)
+                {
+                    audioSource.PlayOneShot(switchClip);
+                    option++;
+                }
             }
             else if((float) data >0)
             {
-                if ((int)option > 0) option--;
+                if ((int)option > 0)
+                {
+                    audioSource.PlayOneShot(switchClip);
+                    option--;
+                }
             }
         }
     }
@@ -167,6 +188,7 @@ public class PauseUIController : MonoBehaviour
     {
         if(sender.GetComponent<PlayerController>().isPlayer1 == isPlayer1)
         {
+            audioSource.PlayOneShot(pressClip);
             switch (option)
             {
                 case PauseOption.RESUME:
@@ -182,6 +204,12 @@ public class PauseUIController : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public IEnumerator Wait(float delay, System.Action operation)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+        operation();
     }
 }
 

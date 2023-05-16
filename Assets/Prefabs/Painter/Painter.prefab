@@ -108,6 +108,14 @@ PrefabInstance:
       propertyPath: _skill
       value: 
       objectReference: {fileID: 7478032692912651726}
+    - target: {fileID: 868233826664732292, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: skillAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: e94d5c734d78ae240a954cb8933a4ad5, type: 3}
+    - target: {fileID: 868233826664732292, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 8459497333485157556}
     - target: {fileID: 1735372795233249193, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -137,9 +145,21 @@ PrefabInstance:
       value: Player/Item[/Keyboard/q,/Keyboard/u,/XInputControllerWindows/buttonNorth]
       objectReference: {fileID: 0}
     - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: shootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 72d1caa67653f774e98505feb4520c8c, type: 3}
+    - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: ReloadSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f1e9dd45a101d442aabcfbcce16323b, type: 3}
+    - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 4698778424898348446, guid: a1d73c490e400c943b22609f37e4c8a0, type: 3}
+    - target: {fileID: 9120389052974008512, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: DieSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b2126329454901f4c80b7cbe85839944, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
 --- !u!4 &7199517202633004031 stripped
@@ -161,5 +181,10 @@ MonoBehaviour:
 --- !u!95 &3759157360906358228 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5822967551954206810, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+  m_PrefabInstance: {fileID: 7270045172757761422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8459497333485157556 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1261658333362401594, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
   m_PrefabInstance: {fileID: 7270045172757761422}
   m_PrefabAsset: {fileID: 0}

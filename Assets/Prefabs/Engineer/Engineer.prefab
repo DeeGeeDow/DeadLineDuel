@@ -104,6 +104,14 @@ PrefabInstance:
       propertyPath: _skill
       value: 
       objectReference: {fileID: 1519499020830074664}
+    - target: {fileID: 868233826664732292, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: skillAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: c54e24491ad737649bcb6c17e80ed73b, type: 3}
+    - target: {fileID: 868233826664732292, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 264838361571219343}
     - target: {fileID: 1735372795233249193, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -112,14 +120,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4069457491366840242, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4819410861786932975}
     - target: {fileID: 5822967551954206810, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 153981c80bfd09949a7f5cf3ea285194, type: 2}
+    - target: {fileID: 6208342015085664580, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208342015085664580, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: 1399b828-325e-4c47-85e0-86b333a8e6d4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208342015085664580, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: Player/Item[/Keyboard/q,/Keyboard/u]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: shootSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 130a83f8aafd2ad46842f7b8ff8c81f3, type: 3}
+    - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: ReloadSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 40623194844798a499dd7355af8bad63, type: 3}
+    - target: {fileID: 7729064879527839536, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4698778424898348446, guid: a0194b3e05e2df94c9805ae2b52014a5, type: 3}
+    - target: {fileID: 9120389052974008512, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+      propertyPath: DieSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 53409588067b62741a0d6b97f55661e4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
 --- !u!4 &1523091710784534724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 508257293306175089, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+  m_PrefabInstance: {fileID: 1310172042227836597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4819410861786932975 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5822967551954206810, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
+  m_PrefabInstance: {fileID: 1310172042227836597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &264838361571219343 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1261658333362401594, guid: b2701fd057d452e4aaac727744695ab8, type: 3}
   m_PrefabInstance: {fileID: 1310172042227836597}
   m_PrefabAsset: {fileID: 0}

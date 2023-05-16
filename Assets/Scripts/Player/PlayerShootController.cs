@@ -9,6 +9,7 @@ public class PlayerShootController : MonoBehaviour
     public GameEvent onPlayerBulletChanged;
     public Animator animator;
     public AudioClip shootSFX;
+    public AudioClip ReloadSFX;
     [SerializeField] private float shootCooldown = 1;
     [SerializeField] private float reloadTime = 1;
     [SerializeField] private int bulletCount = 5;
@@ -83,6 +84,7 @@ public class PlayerShootController : MonoBehaviour
 
     public void reload()
     {
+        audioSource.PlayOneShot(ReloadSFX);
         if (bulletCount == maxBullet || isReloading)
         {
             return;
