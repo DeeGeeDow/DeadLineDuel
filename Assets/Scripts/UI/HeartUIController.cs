@@ -35,6 +35,7 @@ public class HeartUIController : MonoBehaviour
     {
         GameObject heart = Instantiate(heartPrefab);
         heart.transform.SetParent(transform);
+        heart.transform.localScale = new Vector3(1, 1, 1);
         hearts.Push(heart);
     }
 

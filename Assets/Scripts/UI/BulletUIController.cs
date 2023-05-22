@@ -35,8 +35,7 @@ public class BulletUIController : MonoBehaviour
     {
         GameObject Bullet = Instantiate(BulletPrefab);
         Bullet.transform.SetParent(transform);
-        Vector3 BulletScale = Bullet.transform.localScale;
-        Bullet.transform.localScale = new Vector3(Mathf.Abs(BulletScale.x), Mathf.Abs(BulletScale.y), Mathf.Abs(BulletScale.z));
+        Bullet.transform.localScale = new Vector3(1, 1, 1);
         Bullets.Push(Bullet);
     }
 

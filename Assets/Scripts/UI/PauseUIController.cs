@@ -96,12 +96,18 @@ public class PauseUIController : MonoBehaviour
             enabled = true;
             isPlayer1 = sender.GetComponent<PlayerController>().isPlayer1;
             option = PauseOption.RESUME;
+
+            resumeImage.sprite = ResumeSpriteIdle;
+            restartImage.sprite = RestartSpriteIdle;
+            exitImage.sprite = ExitSpriteIdle;
         }
     }
 
     private void ResumeHover()
     {
-        resumeImage.color = new Color(200, 200, 200);
+        resumeImage.color = Color.gray;
+        restartImage.color = Color.white;
+        exitImage.color = Color.white;
     }
 
     private void ResumeChosen()
@@ -125,7 +131,9 @@ public class PauseUIController : MonoBehaviour
     
     private void RestartHover()
     {
-        restartImage.color = new Color(200, 200, 200);
+        resumeImage.color = Color.white;
+        restartImage.color = Color.gray;
+        exitImage.color = Color.white;
     }
 
     private void RestartChosen()
@@ -139,7 +147,9 @@ public class PauseUIController : MonoBehaviour
 
     private void ExitHover()
     {
-        exitImage.color = new Color(200, 200, 200);
+        resumeImage.color = Color.white;
+        restartImage.color = Color.white;
+        exitImage.color = Color.grey;
     }
 
     private void ExitChosen()
