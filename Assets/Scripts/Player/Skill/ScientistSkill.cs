@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ScientistSkill : MonoBehaviour, Skill
 {
-    public float skillDuration = 0.5f;
-    public float skillDelay = 0.1f;
+    public float skillDuration = 6.25f;
+    public float skillDelay = 3.25f;
     public GameEvent skillFinished;
     public GameObject skillPrefab;
     private GameObject skill;
@@ -28,13 +28,19 @@ public class ScientistSkill : MonoBehaviour, Skill
     {
         skill = Instantiate(skillPrefab, transform.parent);
         bool isPlayer1 = GetComponent<PlayerController>().isPlayer1;
-        skill.transform.localPosition = (isPlayer1) ? Vector3.right : Vector3.left;
+        skill.transform.localPosition = ((isPlayer1) ? Vector3.right : Vector3.left)*2f + Vector3.up;
+        skill.GetComponentInChildren<Collider>().enabled = false;
         if (!isPlayer1)
         {
             skill.GetComponentInChildren<SpriteRenderer>().flipX = true;
             Vector3 collider_center = skill.GetComponentInChildren<BoxCollider>().center;
             skill.GetComponentInChildren<BoxCollider>().center = new Vector3(collider_center.x * (-1), collider_center.y, collider_center.z);
         }
+
+        Cooldown waitAnimation = new Cooldown();
+        waitAnimation.setDuration(0.35f);
+        waitAnimation.setOperation(() => { skill.GetComponentInChildren<Collider>().enabled = true; });
+        StartCoroutine(waitAnimation.start());
 
     }
     public void afterSkill()
