@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Winning Scene.unity
     guid: c3a12e63ea6e2084690dd675197c670a
+  - enabled: 1
+    path: Assets/Scenes/Loading Screen.unity
+    guid: c63c863bf67bd67499b2ca5ae8de7c98
   m_configObjects: {}

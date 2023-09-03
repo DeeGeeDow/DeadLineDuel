@@ -124,7 +124,7 @@ public class ChoosePlayerController : MonoBehaviour
 
     private IEnumerator ChooseDirectionCD()
     {
-        yield return new WaitForSeconds(chooseDirectionCD);
+        yield return new WaitForSecondsRealtime(chooseDirectionCD);
         chooseDirectionAvailable = true;
     }
 

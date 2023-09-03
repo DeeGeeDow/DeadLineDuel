@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.Video;
 
 public class StartTextController : MonoBehaviour
 {
@@ -46,27 +47,23 @@ public class StartTextController : MonoBehaviour
 
         if (inputAllowed && !inputPressed)
         {
-            InputSystem.onAnyButtonPress.CallOnce(e => ButtonPressed());
-            Debug.Log("Test");
+            InputSystem.onAnyButtonPress.CallOnce(e =>
+            {
+                inputPressed = true;
+            });
         } else if (inputAllowed && inputPressed)
         {
             inputAllowed = false;
             inputPressed = false;
-            SceneManager.LoadScene("Player Selection", LoadSceneMode.Single);
+            LoadingData.sceneToLoad = "Player Selection";
+            SceneManager.LoadScene("Loading Screen");
         }
     }
 
     private IEnumerator DelayShowStart()
     {
-        Debug.Log("Mulai menunggu");
         yield return new WaitForSecondsRealtime(2.5f);
-        Debug.Log("sudah selesai menunggu");
         GetComponent<Image>().enabled = true;
         inputAllowed = true;
-    }
-
-    private void ButtonPressed()
-    {
-        inputPressed = true;
     }
 }

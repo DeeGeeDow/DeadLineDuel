@@ -54,7 +54,8 @@ public class ChoosePlayerManager : MonoBehaviour
         {
             PlayerTypes[] players = { Player1, Player2 };
             GameStart.Raise(this, players);
-            SceneManager.LoadScene("Hacker Map");
+            LoadingData.sceneToLoad = "Hacker Map";
+            SceneManager.LoadScene("Loading Screen");
         }
 
     }

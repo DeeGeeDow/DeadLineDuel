@@ -150,7 +150,11 @@ public class PlayerManager : MonoBehaviour
 
     public void Update()
     {
-        if (gameEnded) Victory();
+        if (gameEnded)
+        {
+            Cooldown waitDeathAnimation = new Cooldown(VictoryAudioDelay, Victory);
+            StartCoroutine(waitDeathAnimation.start());
+        }
     }
     public void onChangedHeart(Component sender, object data)
     {
@@ -166,7 +170,8 @@ public class PlayerManager : MonoBehaviour
     private IEnumerator VictoryCoroutine()
     {
         yield return new WaitForSecondsRealtime(victoryShowDuration + VictoryAudioDelay);
-        SceneManager.LoadScene("Winning Scene");
+        LoadingData.sceneToLoad = "Winning Scene";
+        SceneManager.LoadScene("Loading Screen");
     }
 }
 

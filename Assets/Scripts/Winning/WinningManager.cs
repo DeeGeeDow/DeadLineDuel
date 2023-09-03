@@ -63,19 +63,22 @@ public class WinningManager : MonoBehaviour
     public void Quit()
     {
         Destroy(stateMan.gameObject);
-        SceneManager.LoadScene("Start Menu");
+        LoadingData.sceneToLoad = "Start Menu";
+        SceneManager.LoadScene("Loading Screen");
     }
 
     public void CharSelect()
     {
         Destroy(stateMan.gameObject);
-        SceneManager.LoadScene("Player Selection");
+        LoadingData.sceneToLoad = "Player Selection";
+        SceneManager.LoadScene("Loading Screen");
     }
 
     public void Restart()
     {
         stateMan.isGameFinished = false;
         stateMan.isGameStarted = true;
-        SceneManager.LoadScene("Hacker Map");
+        LoadingData.sceneToLoad = "Hacker Map";
+        SceneManager.LoadScene("Loading Screen");
     }
 }

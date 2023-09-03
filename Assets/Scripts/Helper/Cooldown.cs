@@ -7,6 +7,18 @@ public class Cooldown
     private float duration;
     private System.Action operation; 
 
+    public Cooldown()
+    {
+        this.duration = 0f;
+        this.operation = () => { };
+    }
+
+    public Cooldown(float duration, System.Action operation)
+    {
+        this.duration = duration;
+        this.operation = operation;
+    }
+
     public void setDuration(float duration)
     {
         this.duration = duration;

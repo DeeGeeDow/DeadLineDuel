@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 87777501}
   - component: {fileID: 87777500}
   - component: {fileID: 87777503}
-  - component: {fileID: 87777504}
   m_Layer: 5
   m_Name: Chara 2
   m_TagString: Untagged
@@ -153,7 +152,7 @@ RectTransform:
   m_GameObject: {fileID: 87777498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1057823460}
   m_RootOrder: 0
@@ -161,7 +160,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 600, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -839.59326, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87777500
 MonoBehaviour:
@@ -177,10 +176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerToShow: 1
   isPlayer1: 0
-  ScientistSprite: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
-  HackerSprite: {fileID: 342900966683265971, guid: c757e159cbc80a245acfd916f1774ec2, type: 3}
-  EngineerSprite: {fileID: 21300000, guid: 6e18455708d0b7a4a8e507324aff3ca0, type: 3}
-  PainterSprite: {fileID: 21300000, guid: 6a4d11d86bcecd749a2f3c0fad74d925, type: 3}
+  ScientistSprite: {fileID: 3191487229801253599, guid: d88299d359961d24ea806e7a97efd827, type: 3}
+  HackerSprite: {fileID: 876576419081252185, guid: 0a7ac3379df504c4fa9f277a4a51522e, type: 3}
+  EngineerSprite: {fileID: 1595982907714843850, guid: d6d9856e225503f4d875e0d08b660802, type: 3}
+  PainterSprite: {fileID: 2260163186175865918, guid: 1792ee5355315374c8e41647cdb5a176, type: 3}
 --- !u!114 &87777501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,9 +200,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 876576419081252185, guid: 0a7ac3379df504c4fa9f277a4a51522e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -247,20 +246,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &87777504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87777498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 2
-  m_AspectRatio: 1
 --- !u!1 &90856688
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +352,6 @@ GameObject:
   - component: {fileID: 165849487}
   - component: {fileID: 165849486}
   - component: {fileID: 165849489}
-  - component: {fileID: 165849490}
   m_Layer: 5
   m_Name: Chara 1
   m_TagString: Untagged
@@ -384,7 +368,7 @@ RectTransform:
   m_GameObject: {fileID: 165849484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1416177620}
   m_RootOrder: 0
@@ -392,7 +376,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -600, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -839.59326, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165849486
 MonoBehaviour:
@@ -408,10 +392,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerToShow: 0
   isPlayer1: 1
-  ScientistSprite: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
-  HackerSprite: {fileID: 342900966683265971, guid: c757e159cbc80a245acfd916f1774ec2, type: 3}
-  EngineerSprite: {fileID: 21300000, guid: 6e18455708d0b7a4a8e507324aff3ca0, type: 3}
-  PainterSprite: {fileID: 21300000, guid: 6a4d11d86bcecd749a2f3c0fad74d925, type: 3}
+  ScientistSprite: {fileID: 3191487229801253599, guid: d88299d359961d24ea806e7a97efd827, type: 3}
+  HackerSprite: {fileID: 876576419081252185, guid: 0a7ac3379df504c4fa9f277a4a51522e, type: 3}
+  EngineerSprite: {fileID: 1595982907714843850, guid: d6d9856e225503f4d875e0d08b660802, type: 3}
+  PainterSprite: {fileID: 2260163186175865918, guid: 1792ee5355315374c8e41647cdb5a176, type: 3}
 --- !u!114 &165849487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,9 +416,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 3191487229801253599, guid: d88299d359961d24ea806e7a97efd827, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -478,20 +462,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &165849490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165849484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 2
-  m_AspectRatio: 1
 --- !u!1 &456629467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,10 +2080,10 @@ MonoBehaviour:
   HackerHead: {fileID: 21300000, guid: 3175812a31742a64d94409e6b63bffb0, type: 3}
   EngineerHead: {fileID: 21300000, guid: e9da03e6ae72cc2439c555fa4dff815e, type: 3}
   PainterHead: {fileID: 21300000, guid: ecf94ad43a43c584cb8719d36f2d99e5, type: 3}
-  ScientistBody: {fileID: -3200389409107238600, guid: 582df168a5ba3404989c100100b1e022, type: 3}
-  HackerBody: {fileID: 342900966683265971, guid: c757e159cbc80a245acfd916f1774ec2, type: 3}
-  EngineerBody: {fileID: 21300000, guid: 6e18455708d0b7a4a8e507324aff3ca0, type: 3}
-  PainterBody: {fileID: 21300000, guid: 6a4d11d86bcecd749a2f3c0fad74d925, type: 3}
+  ScientistBody: {fileID: 3191487229801253599, guid: d88299d359961d24ea806e7a97efd827, type: 3}
+  HackerBody: {fileID: 876576419081252185, guid: 0a7ac3379df504c4fa9f277a4a51522e, type: 3}
+  EngineerBody: {fileID: 1595982907714843850, guid: d6d9856e225503f4d875e0d08b660802, type: 3}
+  PainterBody: {fileID: 2260163186175865918, guid: 1792ee5355315374c8e41647cdb5a176, type: 3}
   isGameFinished: 0
   isGameStarted: 0
   isPlayer1Win: 0

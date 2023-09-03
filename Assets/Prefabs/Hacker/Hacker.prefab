@@ -146,6 +146,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3661453642151128320}
+        m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
+        m_MethodName: onPauseOptionChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c9a615fd-d1fa-499c-b2b5-2096957b939b
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -153,6 +165,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6447162971151393540}
         m_TargetAssemblyTypeName: PlayerShootController, Assembly-CSharp
         m_MethodName: onShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3661453642151128320}
+        m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
+        m_MethodName: onPauseOptionChosen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -197,7 +221,19 @@ MonoBehaviour:
     m_ActionId: 3f72ceea-df2b-4a3e-9c06-d2ebcdf53613
     m_ActionName: Player/Reload[/Keyboard/r,/Keyboard/slash]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3661453642151128320}
+        m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
+        m_MethodName: onPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 14ef99fa-f9a5-4658-a700-f82c9aa70be2
     m_ActionName: Player/Pause[/Keyboard/escape]
   - m_PersistentCalls:
@@ -235,7 +271,7 @@ Animator:
   m_GameObject: {fileID: 1282041049624855245}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 563a2baf5176c174e87f95179f281254, type: 2}
+  m_Controller: {fileID: 9100000, guid: fee73de47ae50de4aaf3d68bf525bac2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -438,8 +474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95623eceba9039242b9ab430f4c5f7c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDuration: 5
-  animationSkillDuration: 0.5
+  skillDuration: 16
+  animationCharaDuration: 3.5
+  animationSkillDuration: 3
+  skillDelay: 3
   skillStarted: {fileID: 11400000, guid: 9e942435947d7644d85a1c776e91fcdf, type: 2}
   skillFinished: {fileID: 11400000, guid: 935d94ff74481e5418c14be0256510c9, type: 2}
   skillPrefab: {fileID: 2669209765079406295, guid: 0b1ee563379db6d41903d0ff0bf202df, type: 3}

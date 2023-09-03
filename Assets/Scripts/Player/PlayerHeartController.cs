@@ -50,8 +50,11 @@ public class PlayerHeartController : MonoBehaviour
         heart--;
         audioSource.PlayOneShot(HitSFX);
         onPlayerHealthChanged.Raise(this, heart);
-        StartCoroutine(Immune());
-        StartCoroutine(TinungTinung());
+        if(heart > 0)
+        {
+            StartCoroutine(Immune());
+            StartCoroutine(TinungTinung());
+        }
     }
 
     private IEnumerator TinungTinung()

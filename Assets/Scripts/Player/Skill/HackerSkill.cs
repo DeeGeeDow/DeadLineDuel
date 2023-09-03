@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class HackerSkill : MonoBehaviour, Skill
 {
-    public float skillDuration = 2.0f;
-    public float animationSkillDuration = 0.5f;
-    //public float skillDelay = 0.1f;
+    public float skillDuration = 16f;
+    public float animationCharaDuration = 3.5f;
+    public float animationSkillDuration = 3f;
+    public float skillDelay = 3f;
     public GameEvent skillStarted;
     public GameEvent skillFinished;
     public GameObject skillPrefab;
     private GameObject skill;
+    private Camera mainCamera;
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
+    private void LateUpdate()
+    {
+        if(!(skill is null))
+        {
+            skill.transform.eulerAngles = mainCamera.transform.eulerAngles;
+        }
+    }
     public void onCast()
     {
-        Cooldown cooldown = new Cooldown();
-        Cooldown animationCD = new Cooldown();
+        Cooldown cooldown = new Cooldown(skillDuration, afterSkill);
+        Cooldown delay = new Cooldown(skillDelay, beginSkill);
+        Cooldown animationCD = new Cooldown(animationCharaDuration, afterAnimationFinsihed);
 
-        cooldown.setDuration(skillDuration);
-        cooldown.setOperation(afterSkill);
-        //delay.setDuration(skillDelay);
-        //delay.setOperation(beginSkill);
-
-        animationCD.setDuration(animationSkillDuration);
-        animationCD.setOperation(afterAnimationFinsihed);
-
-        beginSkill();
+        //beginSkill();
 
         Debug.Log("Hacker Skill casted");
-        //StartCoroutine(delay.start());
+        StartCoroutine(delay.start());
         StartCoroutine(cooldown.start());
         StartCoroutine(animationCD.start());
     }
@@ -36,14 +44,22 @@ public class HackerSkill : MonoBehaviour, Skill
     {
         skill = Instantiate(skillPrefab, transform.parent);
         bool isPlayer1 = GetComponent<PlayerController>().isPlayer1;
-        skill.transform.localPosition = (isPlayer1) ? Vector3.right : Vector3.left;
+        skill.transform.localPosition = ((isPlayer1) ? Vector3.right : Vector3.left) + Vector3.up;
         if (!isPlayer1)
         {
             skill.GetComponentInChildren<SpriteRenderer>().flipX = true;
             // collider_center = skill.GetComponentInChildren<BoxCollider>().center;
             // skill.GetComponentInChildren<BoxCollider>().center = new Vector3(collider_center.x * (-1), collider_center.y, collider_center.z);
         }
-        skillStarted.Raise(this, null);
+
+        Cooldown skillAnimationCD = new Cooldown(animationSkillDuration, () =>
+        {
+            Destroy(skill);
+            skill = null;
+            skillStarted.Raise(this, null);
+        });
+        StartCoroutine(skillAnimationCD.start());
+
     }
     public void afterSkill()
     {
@@ -53,7 +69,6 @@ public class HackerSkill : MonoBehaviour, Skill
     public void afterAnimationFinsihed()
     {
         Debug.Log("aodskamfamof");
-        Destroy(skill);
         skillFinished.Raise(this, false);
     }
 }

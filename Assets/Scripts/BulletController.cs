@@ -11,6 +11,10 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
+        if (!isPlayer1)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     private void LateUpdate()

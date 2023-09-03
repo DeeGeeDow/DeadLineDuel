@@ -71,4 +71,11 @@ public class PlayerSkillController : MonoBehaviour
     {
         castSkill();
     }
+
+    [ContextMenu("Full Charge")]
+    public void FullCharge()
+    {
+        skillProgress = skillCooldown;
+        isSkillReady = true;
+    }
 }

@@ -84,11 +84,11 @@ public class PlayerShootController : MonoBehaviour
 
     public void reload()
     {
-        audioSource.PlayOneShot(ReloadSFX);
         if (bulletCount == maxBullet || isReloading)
         {
             return;
         }
+        audioSource.PlayOneShot(ReloadSFX);
         isReloading = true;
         StartCoroutine(StartCooldown(reloadTime, onFinishReload));
     }
