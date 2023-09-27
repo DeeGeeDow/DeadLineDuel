@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137535692ce94de4d84f410e7269905f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillDuration: 6.25
+  skillDuration: 3.75
   skillDelay: 3.25
   skillFinished: {fileID: 11400000, guid: 935d94ff74481e5418c14be0256510c9, type: 2}
   skillPrefab: {fileID: 2557707142959781102, guid: 67ba3f89ef721864e8e67fc22a7cb067, type: 3}

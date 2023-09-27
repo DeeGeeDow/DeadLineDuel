@@ -48,10 +48,10 @@ MonoBehaviour:
   skillStarted: {fileID: 11400000, guid: 9e942435947d7644d85a1c776e91fcdf, type: 2}
   skillFinished: {fileID: 11400000, guid: 935d94ff74481e5418c14be0256510c9, type: 2}
   _inkPrefab: {fileID: 5039889061482524996, guid: 879d2f0ba27a354439a873a13d739561, type: 3}
-  _skillDuration: 5
+  _skillDuration: 3
   _skillShootInterval: 0.5
-  _skillMaxRadius: 3
-  _inkShootDelay: 1
+  _skillMaxRadius: 1
+  _inkShootDelay: 0.2
   _inkShootInterval: 0.1
 --- !u!1001 &7270045172757761422
 PrefabInstance:

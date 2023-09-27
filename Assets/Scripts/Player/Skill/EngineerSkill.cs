@@ -38,11 +38,13 @@ public class EngineerSkill : MonoBehaviour, Skill
             newWall = _myWalls.Dequeue();
             newWall.gameObject.SetActive(true);
             newWall.transform.position = position;
+            newWall.hp = 2;
             return newWall;
         }
         newWall = Instantiate(_wallPrefab, position, Quaternion.identity);
         newWall.IsPooled = true;
         newWall.OnObstacleDestroyed += NewWall_OnObstacleDestroyed;
+        newWall.hp = 2;
         return newWall;
     }
 

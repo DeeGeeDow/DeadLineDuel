@@ -22,7 +22,7 @@ public class PlayerDebuffController : MonoBehaviour
         {
             //Debug.Log("Harusnya awl awl");
             EnableAttack(false);
-            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0.5f);
+            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0.8f);
         }
     }
 

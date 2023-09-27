@@ -2609,9 +2609,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 94c88d7530646124db0c03e989f07569, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4bf9e4f5c546318458bde5dee067b269, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3875,7 +3875,7 @@ MonoBehaviour:
   victoryShowDuration: 5
   audioSource: {fileID: 985211720}
   ReadyGo: {fileID: 8300000, guid: 7be46e628143642419ff37f196dedd51, type: 3}
-  GameBGM: {fileID: 8300000, guid: 94c88d7530646124db0c03e989f07569, type: 3}
+  GameBGM: {fileID: 8300000, guid: 4bf9e4f5c546318458bde5dee067b269, type: 3}
   VictoryAudio: {fileID: 8300000, guid: 5c0b5ca6d03b8124fa796cb38c942f93, type: 3}
   ReadyGoDuration: 4
   VictoryAudioDelay: 3
